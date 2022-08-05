@@ -23,10 +23,17 @@ import android.widget.Toast;
 
 import com.gmy.gamelesson.adapter.MainListAdapter;
 import com.gmy.gamelesson.onClickListener.RecyclerViewListOnItemClickListener;
+import com.gmy.gamelesson.ui.AssertsActivity;
 import com.gmy.gamelesson.ui.Audio2Activity;
 import com.gmy.gamelesson.ui.AudioPlayActivity;
+import com.gmy.gamelesson.ui.HexagonActivity;
+import com.gmy.gamelesson.ui.PointLinesSurfaceActivity;
 import com.gmy.gamelesson.ui.SDCardActivity;
 import com.gmy.gamelesson.ui.SQLiteActivity;
+import com.gmy.gamelesson.ui.SharedPreferencesActivity;
+import com.gmy.gamelesson.ui.SurfaceActivity;
+import com.gmy.gamelesson.ui.TrianglePairSurfaceActivity;
+import com.gmy.gamelesson.ui.TriangleSurfaceViewActivity;
 import com.gmy.gamelesson.utils.FileStorageHelper;
 
 import java.io.File;
@@ -67,7 +74,13 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("音频播放2");
         this.dataList.add("数据库");
         this.dataList.add("sd卡");
-        this.dataList.add("第五节");
+        this.dataList.add("assets");
+        this.dataList.add("SharedPreferences");
+        this.dataList.add("Surface");
+        this.dataList.add("OpenGL Triangle");
+        this.dataList.add("Points Lines");
+        this.dataList.add("TrianglePair");
+        this.dataList.add("Hexagon");
     }
 
     private void initViews(){
@@ -108,6 +121,48 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
                 Intent sdcardIntent = new Intent(mContext, SDCardActivity.class);
                 sdcardIntent.putExtra("androidSummaryFullPath",androidSummaryFullPath);
                 startActivity(sdcardIntent);
+            }
+            break;
+            case 4:
+            {
+                Intent assetsIntent = new Intent(mContext, AssertsActivity.class);
+                startActivity(assetsIntent);
+            }
+            break;
+            case 5:
+            {
+                Intent assetsIntent = new Intent(mContext, SharedPreferencesActivity.class);
+                startActivity(assetsIntent);
+            }
+            break;
+            case 6:
+            {
+                Intent surfaceIntent = new Intent(mContext, SurfaceActivity.class);
+                startActivity(surfaceIntent);
+            }
+            break;
+            case 7:
+            {
+                Intent triangleSurfaceIntent = new Intent(mContext, TriangleSurfaceViewActivity.class);
+                startActivity(triangleSurfaceIntent);
+            }
+            break;
+            case 8:
+            {
+                Intent pointsLinesSurfaceIntent = new Intent(mContext, PointLinesSurfaceActivity.class);
+                startActivity(pointsLinesSurfaceIntent);
+            }
+            break;
+            case 9:
+            {
+                Intent trianglePairIntent = new Intent(mContext, TrianglePairSurfaceActivity.class);
+                startActivity(trianglePairIntent);
+            }
+            break;
+            case 10:
+            {
+                Intent trianglePairIntent = new Intent(mContext, HexagonActivity.class);
+                startActivity(trianglePairIntent);
             }
             break;
             default:

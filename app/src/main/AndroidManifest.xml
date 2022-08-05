@@ -7,8 +7,8 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -19,7 +19,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.SDCardActivity"></activity>
+        <activity android:name=".ui.HexagonActivity"></activity>
+        <activity android:name=".ui.TrianglePairSurfaceActivity" />
+        <activity android:name=".ui.PointLinesSurfaceActivity" />
+        <activity android:name=".ui.TriangleSurfaceViewActivity" />
+        <activity android:name=".ui.SurfaceActivity" />
+        <activity android:name=".ui.SharedPreferencesActivity" />
+        <activity android:name=".ui.AssertsActivity" />
+        <activity android:name=".ui.SDCardActivity" />
         <activity android:name=".ui.SQLiteActivity" />
         <activity android:name=".ui.Audio2Activity" />
         <activity android:name=".ui.AudioPlayActivity" />
