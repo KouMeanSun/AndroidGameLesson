@@ -10,4 +10,7 @@ public class Constant {
     public static float PICYSPEED=2;		//图片垂直移动速度
     public static int PICRUNSPEED=30;		//图片的运动线程的刷新速度
     public static int PICALPHASPEED=20;	//图片渐暗效果演示刷新速度
+
+    public static final float UNIT_SIZE=1.0f;//单位尺寸
+    public static final float SCALE=0.5f;//尺寸缩放比
 }

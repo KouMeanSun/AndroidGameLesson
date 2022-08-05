@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.gmy.gamelesson.adapter.MainListAdapter;
 import com.gmy.gamelesson.onClickListener.RecyclerViewListOnItemClickListener;
+import com.gmy.gamelesson.surfaceview.DrawHyperboloid2Activity;
 import com.gmy.gamelesson.ui.AssertsActivity;
 import com.gmy.gamelesson.ui.Audio2Activity;
 import com.gmy.gamelesson.ui.AudioPlayActivity;
@@ -30,14 +31,30 @@ import com.gmy.gamelesson.ui.Ball2SurfaceActivity;
 import com.gmy.gamelesson.ui.Ball3SurfaceActivity;
 import com.gmy.gamelesson.ui.Ball4SurfaceActivity;
 import com.gmy.gamelesson.ui.BallSurfaceActivity;
+import com.gmy.gamelesson.ui.BallTexture2Activity;
+import com.gmy.gamelesson.ui.BallTextureActivity;
+import com.gmy.gamelesson.ui.CubeColorRectActivity;
 import com.gmy.gamelesson.ui.CubeIndex2SurfaceActivity;
 import com.gmy.gamelesson.ui.CubeVertexSurfaceActivity;
+import com.gmy.gamelesson.ui.DrawCircleActivity;
+import com.gmy.gamelesson.ui.DrawCirque2Activity;
+import com.gmy.gamelesson.ui.DrawCirqueActivity;
+import com.gmy.gamelesson.ui.DrawCylinder2Activity;
+import com.gmy.gamelesson.ui.DrawCylinder3Activity;
+import com.gmy.gamelesson.ui.DrawCylinderActivity;
+import com.gmy.gamelesson.ui.DrawHelicoidSurface2Activity;
+import com.gmy.gamelesson.ui.DrawHelicoidSurfaceActivity;
+import com.gmy.gamelesson.ui.DrawParaboloid2Activity;
+import com.gmy.gamelesson.ui.DrawTaper2Activity;
+import com.gmy.gamelesson.ui.DrawTaperActivity;
 import com.gmy.gamelesson.ui.HexagonActivity;
 import com.gmy.gamelesson.ui.PointLinesSurfaceActivity;
 import com.gmy.gamelesson.ui.SDCardActivity;
 import com.gmy.gamelesson.ui.SQLiteActivity;
 import com.gmy.gamelesson.ui.SharedPreferencesActivity;
 import com.gmy.gamelesson.ui.SurfaceActivity;
+import com.gmy.gamelesson.ui.TextureActivity;
+import com.gmy.gamelesson.ui.TextureRectActivity;
 import com.gmy.gamelesson.ui.TrianglePairSurfaceActivity;
 import com.gmy.gamelesson.ui.TriangleSurfaceViewActivity;
 import com.gmy.gamelesson.utils.FileStorageHelper;
@@ -93,6 +110,23 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("ambient diffused specular shininess Material Light 2");
         this.dataList.add("ambient diffused specular shininess Material Light 3");
         this.dataList.add("ambient diffused specular shininess Material Light 4");
+        this.dataList.add("Texture");
+        this.dataList.add("Ball Texture");
+        this.dataList.add("Ball earth moon");
+        this.dataList.add("Texture Rect");
+        this.dataList.add("Cube Color Rect");
+        this.dataList.add("Cylinder");
+        this.dataList.add("Cylinder2 ");
+        this.dataList.add("DrawTaper");
+        this.dataList.add("DrawTaper2 ");
+        this.dataList.add("Cirque");
+        this.dataList.add("Cirque2");
+        this.dataList.add("Cylinder3");
+        this.dataList.add("Parabolold2");
+        this.dataList.add("DrawCircle");
+        this.dataList.add("Hyperboloid2");
+        this.dataList.add("HelicoidSurface");
+        this.dataList.add("HelicoidSurface2");
     }
 
     private void initViews(){
@@ -215,6 +249,108 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
             }
             break;
 
+            case 17:
+            {
+                Intent textureIntent = new Intent(mContext, TextureActivity.class);
+                startActivity(textureIntent);
+            }
+            break;
+            case 18:
+            {
+                Intent balltextureIntent = new Intent(mContext, BallTextureActivity.class);
+                startActivity(balltextureIntent);
+            }
+            break;
+            case 19:
+            {
+                Intent balltexture2Intent = new Intent(mContext, BallTexture2Activity.class);
+                startActivity(balltexture2Intent);
+            }
+            break;
+            case 20:
+            {
+                Intent texture2RectIntent = new Intent(mContext, TextureRectActivity.class);
+                startActivity(texture2RectIntent);
+            }
+            break;
+            case 21:
+            {
+                Intent cubeRectIntent = new Intent(mContext, CubeColorRectActivity.class);
+                startActivity(cubeRectIntent);
+            }
+            break;
+            case 22:
+            {
+                Intent cubeRectIntent = new Intent(mContext, DrawCylinderActivity.class);
+                startActivity(cubeRectIntent);
+            }
+            break;
+            case 23:
+            {
+                Intent cubeRectIntent = new Intent(mContext, DrawCylinder2Activity.class);
+                startActivity(cubeRectIntent);
+            }
+            break;
+            case 24:
+            {
+                Intent DrawTaperIntent = new Intent(mContext, DrawTaperActivity.class);
+                startActivity(DrawTaperIntent);
+            }
+            break;
+            case 25:
+            {
+                Intent DrawTaper2Intent = new Intent(mContext, DrawTaper2Activity.class);
+                startActivity(DrawTaper2Intent);
+            }
+            break;
+            case 26:
+            {
+                Intent DrawCirqueIntent = new Intent(mContext, DrawCirqueActivity.class);
+                startActivity(DrawCirqueIntent);
+            }
+            break;
+            case 27:
+            {
+                Intent DrawCirque2Intent = new Intent(mContext, DrawCirque2Activity.class);
+                startActivity(DrawCirque2Intent);
+            }
+            break;
+            case 28:
+            {
+                Intent DrawCylinder3Intent = new Intent(mContext, DrawCylinder3Activity.class);
+                startActivity(DrawCylinder3Intent);
+            }
+            break;
+            case 29:
+            {
+                Intent DrawParaboloid2Intent = new Intent(mContext, DrawParaboloid2Activity.class);
+                startActivity(DrawParaboloid2Intent);
+            }
+            break;
+            case 30:
+            {
+                Intent DrawCircleIntent = new Intent(mContext, DrawCircleActivity.class);
+                startActivity(DrawCircleIntent);
+            }
+            break;
+            case 31:
+            {
+                Intent DrawHyperboloid2Intent = new Intent(mContext, DrawHyperboloid2Activity.class);
+                startActivity(DrawHyperboloid2Intent);
+            }
+            break;
+            case 32:
+            {
+                Intent DrawHelicoidSurfaceIntent = new Intent(mContext, DrawHelicoidSurfaceActivity.class);
+                startActivity(DrawHelicoidSurfaceIntent);
+            }
+            break;
+            case 33:
+            {
+                Intent DrawHelicoidSurface2Intent = new Intent(mContext, DrawHelicoidSurface2Activity.class);
+                startActivity(DrawHelicoidSurface2Intent);
+            }
+            break;
             default:
 
                 break;
