@@ -42,7 +42,7 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        this.setRecyclerViewHeight();
+        //this.setRecyclerViewHeight();
         String title = this.dataSource.get(position);
         holder.tvTitle.setText(title);
         holder.itemV.setOnClickListener(new View.OnClickListener() {

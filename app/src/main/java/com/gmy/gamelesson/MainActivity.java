@@ -26,6 +26,12 @@ import com.gmy.gamelesson.onClickListener.RecyclerViewListOnItemClickListener;
 import com.gmy.gamelesson.ui.AssertsActivity;
 import com.gmy.gamelesson.ui.Audio2Activity;
 import com.gmy.gamelesson.ui.AudioPlayActivity;
+import com.gmy.gamelesson.ui.Ball2SurfaceActivity;
+import com.gmy.gamelesson.ui.Ball3SurfaceActivity;
+import com.gmy.gamelesson.ui.Ball4SurfaceActivity;
+import com.gmy.gamelesson.ui.BallSurfaceActivity;
+import com.gmy.gamelesson.ui.CubeIndex2SurfaceActivity;
+import com.gmy.gamelesson.ui.CubeVertexSurfaceActivity;
 import com.gmy.gamelesson.ui.HexagonActivity;
 import com.gmy.gamelesson.ui.PointLinesSurfaceActivity;
 import com.gmy.gamelesson.ui.SDCardActivity;
@@ -70,9 +76,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
     }
 
     private void initData(){
-        this.dataList.add("音频播放");
-        this.dataList.add("音频播放2");
-        this.dataList.add("数据库");
+        this.dataList.add("Audio");
+        this.dataList.add("Audio2");
+        this.dataList.add("SQLite");
         this.dataList.add("sd卡");
         this.dataList.add("assets");
         this.dataList.add("SharedPreferences");
@@ -81,12 +87,18 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("Points Lines");
         this.dataList.add("TrianglePair");
         this.dataList.add("Hexagon");
+        this.dataList.add("Ball Light");
+        this.dataList.add("Ball multiple Light");
+        this.dataList.add("ambient diffused specular shininess Material Light ");
+        this.dataList.add("ambient diffused specular shininess Material Light 2");
+        this.dataList.add("ambient diffused specular shininess Material Light 3");
+        this.dataList.add("ambient diffused specular shininess Material Light 4");
     }
 
     private void initViews(){
         this.mRvList = this.findViewById(R.id.rv_list);
         this.mRvList.setLayoutManager(new LinearLayoutManager(this));
-        this.mRvList.setNestedScrollingEnabled(false);
+        this.mRvList.setNestedScrollingEnabled(true);
         this.mRvList.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
         this.mListAdapter = new MainListAdapter(this,this.mRvList,this.dataList);
         this.mListAdapter.itemClickListener = this;
@@ -165,6 +177,44 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
                 startActivity(trianglePairIntent);
             }
             break;
+            case 11:
+            {
+                Intent ballLightIntent = new Intent(mContext, BallSurfaceActivity.class);
+                startActivity(ballLightIntent);
+            }
+            break;
+            case 12:
+            {
+                Intent ball2LightIntent = new Intent(mContext, Ball2SurfaceActivity.class);
+                startActivity(ball2LightIntent);
+            }
+            break;
+            case 13:
+            {
+                Intent ball3LightIntent = new Intent(mContext, Ball3SurfaceActivity.class);
+                startActivity(ball3LightIntent);
+            }
+            break;
+            case 14:
+            {
+                Intent ball4LightIntent = new Intent(mContext, Ball4SurfaceActivity.class);
+                startActivity(ball4LightIntent);
+            }
+            break;
+            case 15:
+            {
+                Intent cubeLightIntent = new Intent(mContext, CubeVertexSurfaceActivity.class);
+                startActivity(cubeLightIntent);
+            }
+            break;
+
+            case 16:
+            {
+                Intent cube2LightIntent = new Intent(mContext, CubeIndex2SurfaceActivity.class);
+                startActivity(cube2LightIntent);
+            }
+            break;
+
             default:
 
                 break;

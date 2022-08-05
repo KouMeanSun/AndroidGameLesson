@@ -19,7 +19,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.HexagonActivity"></activity>
+        <activity android:name=".ui.CubeIndex2SurfaceActivity"></activity>
+        <activity android:name=".ui.CubeVertexSurfaceActivity" />
+        <activity android:name=".ui.Ball4SurfaceActivity" />
+        <activity android:name=".ui.Ball3SurfaceActivity" />
+        <activity android:name=".ui.Ball2SurfaceActivity" />
+        <activity android:name=".ui.BallSurfaceActivity" />
+        <activity android:name=".ui.HexagonActivity" />
         <activity android:name=".ui.TrianglePairSurfaceActivity" />
         <activity android:name=".ui.PointLinesSurfaceActivity" />
         <activity android:name=".ui.TriangleSurfaceViewActivity" />
