@@ -33,6 +33,7 @@ import com.gmy.gamelesson.ui.Ball4SurfaceActivity;
 import com.gmy.gamelesson.ui.BallSurfaceActivity;
 import com.gmy.gamelesson.ui.BallTexture2Activity;
 import com.gmy.gamelesson.ui.BallTextureActivity;
+import com.gmy.gamelesson.ui.Cube2Activity;
 import com.gmy.gamelesson.ui.CubeColorRectActivity;
 import com.gmy.gamelesson.ui.CubeIndex2SurfaceActivity;
 import com.gmy.gamelesson.ui.CubeVertexSurfaceActivity;
@@ -52,6 +53,9 @@ import com.gmy.gamelesson.ui.PointLinesSurfaceActivity;
 import com.gmy.gamelesson.ui.SDCardActivity;
 import com.gmy.gamelesson.ui.SQLiteActivity;
 import com.gmy.gamelesson.ui.SharedPreferencesActivity;
+import com.gmy.gamelesson.ui.Spheroid2Activity;
+import com.gmy.gamelesson.ui.Spheroid3Activity;
+import com.gmy.gamelesson.ui.SpheroidActivity;
 import com.gmy.gamelesson.ui.SurfaceActivity;
 import com.gmy.gamelesson.ui.TextureActivity;
 import com.gmy.gamelesson.ui.TextureRectActivity;
@@ -127,6 +131,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("Hyperboloid2");
         this.dataList.add("HelicoidSurface");
         this.dataList.add("HelicoidSurface2");
+        this.dataList.add("Spheroid");
+        this.dataList.add("Spheroid2");
+        this.dataList.add("Spheroid3");
+        this.dataList.add("Cube2");
     }
 
     private void initViews(){
@@ -349,6 +357,30 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
             {
                 Intent DrawHelicoidSurface2Intent = new Intent(mContext, DrawHelicoidSurface2Activity.class);
                 startActivity(DrawHelicoidSurface2Intent);
+            }
+            break;
+            case 34:
+            {
+                Intent SpheroidSurface2Intent = new Intent(mContext, SpheroidActivity.class);
+                startActivity(SpheroidSurface2Intent);
+            }
+            break;
+            case 35:
+            {
+                Intent Spheroid2Surface2Intent = new Intent(mContext, Spheroid2Activity.class);
+                startActivity(Spheroid2Surface2Intent);
+            }
+            break;
+            case 36:
+            {
+                Intent Spheroid3Surface2Intent = new Intent(mContext, Spheroid3Activity.class);
+                startActivity(Spheroid3Surface2Intent);
+            }
+            break;
+            case 37:
+            {
+                Intent cube2Intent = new Intent(mContext, Cube2Activity.class);
+                startActivity(cube2Intent);
             }
             break;
             default:

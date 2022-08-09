@@ -19,7 +19,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.DrawHelicoidSurface2Activity"></activity>
+        <activity android:name=".ui.Cube2Activity"></activity>
+        <activity android:name=".ui.Spheroid3Activity" />
+        <activity android:name=".ui.Spheroid2Activity" />
+        <activity android:name=".ui.SpheroidActivity" />
+        <activity android:name=".ui.DrawHelicoidSurface2Activity" />
         <activity android:name=".ui.DrawHelicoidSurfaceActivity" />
         <activity android:name=".surfaceview.DrawHyperboloid2Activity" />
         <activity android:name=".ui.DrawCircleActivity" />
