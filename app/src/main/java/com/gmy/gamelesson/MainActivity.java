@@ -33,6 +33,9 @@ import com.gmy.gamelesson.ui.Ball4SurfaceActivity;
 import com.gmy.gamelesson.ui.BallSurfaceActivity;
 import com.gmy.gamelesson.ui.BallTexture2Activity;
 import com.gmy.gamelesson.ui.BallTextureActivity;
+import com.gmy.gamelesson.ui.Blend2Activity;
+import com.gmy.gamelesson.ui.Blend3Activity;
+import com.gmy.gamelesson.ui.BlendActivity;
 import com.gmy.gamelesson.ui.Cube2Activity;
 import com.gmy.gamelesson.ui.CubeColorRectActivity;
 import com.gmy.gamelesson.ui.CubeIndex2SurfaceActivity;
@@ -137,6 +140,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("Spheroid3");
         this.dataList.add("Cube2");
         this.dataList.add("World");
+        //第十章
+        this.dataList.add("Blend");
+        this.dataList.add("Blend2");
+        this.dataList.add("Blend3");
     }
 
     private void initViews(){
@@ -389,6 +396,24 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
             {
                 Intent wordIntent = new Intent(mContext, WorldActivity.class);
                 startActivity(wordIntent);
+            }
+            break;
+            case 39:
+            {
+                Intent blendIntent = new Intent(mContext, BlendActivity.class);
+                startActivity(blendIntent);
+            }
+            break;
+            case 40:
+            {
+                Intent blend2Intent = new Intent(mContext, Blend2Activity.class);
+                startActivity(blend2Intent);
+            }
+            break;
+            case 41:
+            {
+                Intent blend3Intent = new Intent(mContext, Blend3Activity.class);
+                startActivity(blend3Intent);
             }
             break;
             default:
