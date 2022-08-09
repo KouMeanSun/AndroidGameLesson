@@ -61,6 +61,7 @@ import com.gmy.gamelesson.ui.TextureActivity;
 import com.gmy.gamelesson.ui.TextureRectActivity;
 import com.gmy.gamelesson.ui.TrianglePairSurfaceActivity;
 import com.gmy.gamelesson.ui.TriangleSurfaceViewActivity;
+import com.gmy.gamelesson.ui.WorldActivity;
 import com.gmy.gamelesson.utils.FileStorageHelper;
 
 import java.io.File;
@@ -135,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("Spheroid2");
         this.dataList.add("Spheroid3");
         this.dataList.add("Cube2");
+        this.dataList.add("World");
     }
 
     private void initViews(){
@@ -381,6 +383,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
             {
                 Intent cube2Intent = new Intent(mContext, Cube2Activity.class);
                 startActivity(cube2Intent);
+            }
+            break;
+            case 38:
+            {
+                Intent wordIntent = new Intent(mContext, WorldActivity.class);
+                startActivity(wordIntent);
             }
             break;
             default:
