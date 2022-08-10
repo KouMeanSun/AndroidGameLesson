@@ -19,7 +19,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Blend3Activity"></activity>
+        <activity android:name=".ui.Chapter11FourActivity"></activity>
+        <activity android:name=".ui.Chapter11ThreeActivity" />
+        <activity android:name=".ui.Chapter11TwoActivity" />
+        <activity android:name=".ui.Chapter11OneActivity" />
+        <activity android:name=".ui.Blend3Activity" />
         <activity android:name=".ui.Blend2Activity" />
         <activity android:name=".ui.BlendActivity" />
         <activity android:name=".ui.WorldActivity" />

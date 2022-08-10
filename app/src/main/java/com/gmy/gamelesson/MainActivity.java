@@ -36,6 +36,10 @@ import com.gmy.gamelesson.ui.BallTextureActivity;
 import com.gmy.gamelesson.ui.Blend2Activity;
 import com.gmy.gamelesson.ui.Blend3Activity;
 import com.gmy.gamelesson.ui.BlendActivity;
+import com.gmy.gamelesson.ui.Chapter11FourActivity;
+import com.gmy.gamelesson.ui.Chapter11OneActivity;
+import com.gmy.gamelesson.ui.Chapter11ThreeActivity;
+import com.gmy.gamelesson.ui.Chapter11TwoActivity;
 import com.gmy.gamelesson.ui.Cube2Activity;
 import com.gmy.gamelesson.ui.CubeColorRectActivity;
 import com.gmy.gamelesson.ui.CubeIndex2SurfaceActivity;
@@ -144,6 +148,11 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("Blend");
         this.dataList.add("Blend2");
         this.dataList.add("Blend3");
+        //第十一章
+        this.dataList.add("Chapter11 one");
+        this.dataList.add("Chapter11 two");
+        this.dataList.add("Chapter11 three");
+        this.dataList.add("Chapter11 four");
     }
 
     private void initViews(){
@@ -414,6 +423,30 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
             {
                 Intent blend3Intent = new Intent(mContext, Blend3Activity.class);
                 startActivity(blend3Intent);
+            }
+            break;
+            case 42:
+            {
+                Intent Intent = new Intent(mContext, Chapter11OneActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 43:
+            {
+                Intent Intent = new Intent(mContext, Chapter11TwoActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 44:
+            {
+                Intent Intent = new Intent(mContext, Chapter11ThreeActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 45:
+            {
+                Intent Intent = new Intent(mContext, Chapter11FourActivity.class);
+                startActivity(Intent);
             }
             break;
             default:
