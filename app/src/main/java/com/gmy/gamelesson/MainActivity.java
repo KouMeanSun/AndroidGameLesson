@@ -47,6 +47,13 @@ import com.gmy.gamelesson.ui.Chapter13OneActivity;
 import com.gmy.gamelesson.ui.Chapter13ThreeActivity;
 import com.gmy.gamelesson.ui.Chapter13TwoActivity;
 import com.gmy.gamelesson.ui.Chapter14Activity;
+import com.gmy.gamelesson.ui.Chapter15Activity;
+import com.gmy.gamelesson.ui.Chapter15EightActivity;
+import com.gmy.gamelesson.ui.Chapter15FiveActivity;
+import com.gmy.gamelesson.ui.Chapter15FourActivity;
+import com.gmy.gamelesson.ui.Chapter15SenvenActivity;
+import com.gmy.gamelesson.ui.Chapter15SixActivity;
+import com.gmy.gamelesson.ui.Chapter15ThreeActivity;
 import com.gmy.gamelesson.ui.Cube2Activity;
 import com.gmy.gamelesson.ui.CubeColorRectActivity;
 import com.gmy.gamelesson.ui.CubeIndex2SurfaceActivity;
@@ -170,6 +177,14 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("Chapter13 five");
         //第十四章
         this.dataList.add("Chapter14 ");
+        //第十五章 ,第一节 是 java 工程
+        this.dataList.add("Chapter15 two");
+        this.dataList.add("Chapter15 three");
+        this.dataList.add("Chapter15 four");
+        this.dataList.add("Chapter15 five");
+        this.dataList.add("Chapter15 six");
+        this.dataList.add("Chapter15 senven");
+        this.dataList.add("Chapter15 eight");
     }
 
     private void initViews(){
@@ -505,6 +520,48 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
             case 52:
             {
                 Intent Intent = new Intent(mContext, Chapter14Activity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 53:
+            {
+                Intent Intent = new Intent(mContext, Chapter15Activity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 54:
+            {
+                Intent Intent = new Intent(mContext, Chapter15ThreeActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 55:
+            {
+                Intent Intent = new Intent(mContext, Chapter15FourActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 56:
+            {
+                Intent Intent = new Intent(mContext, Chapter15FiveActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 57:
+            {
+                Intent Intent = new Intent(mContext, Chapter15SixActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 58:
+            {
+                Intent Intent = new Intent(mContext, Chapter15SenvenActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 59:
+            {
+                Intent Intent = new Intent(mContext, Chapter15EightActivity.class);
                 startActivity(Intent);
             }
             break;
