@@ -46,6 +46,7 @@ import com.gmy.gamelesson.ui.Chapter13FourActivity;
 import com.gmy.gamelesson.ui.Chapter13OneActivity;
 import com.gmy.gamelesson.ui.Chapter13ThreeActivity;
 import com.gmy.gamelesson.ui.Chapter13TwoActivity;
+import com.gmy.gamelesson.ui.Chapter14Activity;
 import com.gmy.gamelesson.ui.Cube2Activity;
 import com.gmy.gamelesson.ui.CubeColorRectActivity;
 import com.gmy.gamelesson.ui.CubeIndex2SurfaceActivity;
@@ -167,6 +168,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("Chapter13 three");
         this.dataList.add("Chapter13 four");
         this.dataList.add("Chapter13 five");
+        //第十四章
+        this.dataList.add("Chapter14 ");
     }
 
     private void initViews(){
@@ -496,6 +499,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
             case 51:
             {
                 Intent Intent = new Intent(mContext, Chapter13FiveActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 52:
+            {
+                Intent Intent = new Intent(mContext, Chapter14Activity.class);
                 startActivity(Intent);
             }
             break;
