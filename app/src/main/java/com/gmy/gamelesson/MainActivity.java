@@ -22,6 +22,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.gmy.gamelesson.adapter.MainListAdapter;
+import com.gmy.gamelesson.game.Chapter16.BasketballActivity;
 import com.gmy.gamelesson.onClickListener.RecyclerViewListOnItemClickListener;
 import com.gmy.gamelesson.surfaceview.DrawHyperboloid2Activity;
 import com.gmy.gamelesson.ui.AssertsActivity;
@@ -185,6 +186,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("Chapter15 six");
         this.dataList.add("Chapter15 senven");
         this.dataList.add("Chapter15 eight");
+        //第十六章
+        this.dataList.add("Chapter16 BaskBall Game");
+        //第十七章
+        this.dataList.add("Chapter17 game");
     }
 
     private void initViews(){
@@ -562,6 +567,18 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
             case 59:
             {
                 Intent Intent = new Intent(mContext, Chapter15EightActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 60:
+            {
+                Intent Intent = new Intent(mContext, BasketballActivity.class);
+                startActivity(Intent);
+            }
+            break;
+            case 61:
+            {
+                Intent Intent = new Intent(mContext, com.gmy.gamelesson.game.Chapter17.MainActivity.class);
                 startActivity(Intent);
             }
             break;

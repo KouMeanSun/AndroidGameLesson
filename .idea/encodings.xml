@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/BallCloud.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/Constant.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/Cube.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/DropOff.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/Floor.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/LogosView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/MainActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/MainMenu.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/MySurfaceView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/Number.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/RotateThread.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/SoundControl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/TextureRect.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/WinDrop.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/YouWin.java" charset="GBK" />
+  </component>
+</project>
