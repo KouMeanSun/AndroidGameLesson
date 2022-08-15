@@ -19,6 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".game.Chapter18.GL_Demo"></activity>
         <activity android:name=".game.Chapter17.MainActivity"></activity>
         <activity android:name=".game.Chapter16.BasketballActivity"></activity>
         <activity android:name=".ui.Chapter15EightActivity" />

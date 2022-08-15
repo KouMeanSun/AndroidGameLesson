@@ -16,5 +16,28 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/TextureRect.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/WinDrop.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter17/YouWin.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/AboutSurfaceView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/ActionThread.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/Background.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/Ball.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/Base.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/Box.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/BoxGroup.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/Column.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/Constant.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/FailSurfaceView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/Floor.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/GL_Demo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/HelpSurfaceView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/Line.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/LoadSurfaceView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/MySurfaceView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/Score.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/SingleBox.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/SoundSurfaceView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/StartSurfaceView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/TextureRect.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/Tree.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/gmy/gamelesson/game/Chapter18/WinSurfaceView.java" charset="GBK" />
   </component>
 </project>
