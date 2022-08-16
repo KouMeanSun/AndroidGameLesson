@@ -193,6 +193,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
         this.dataList.add("Chapter17 game");
         //第十八章
         this.dataList.add("Chapter18 game");
+        //第十九章
+        this.dataList.add("Chapter19 game");
     }
 
     private void initViews(){
@@ -588,6 +590,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewListO
             case 62:
             {
                 Intent Intent = new Intent(mContext, GL_Demo.class);
+                startActivity(Intent);
+            }
+            break;
+            case 63:
+            {
+                Intent Intent = new Intent(mContext, com.gmy.gamelesson.game.Chapter19.GL_Demo.class);
                 startActivity(Intent);
             }
             break;

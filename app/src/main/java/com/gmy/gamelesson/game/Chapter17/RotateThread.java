@@ -3,7 +3,7 @@ package com.gmy.gamelesson.game.Chapter17;
 import static com.gmy.gamelesson.game.Chapter17.Constant.*;
 public class RotateThread extends Thread
 {
-   int function;//Ğı×ª·½Ê½  0-Ğ¡ÃæË³Ê±Õë 1-Ğ¡ÃæÄæÊ±Õë  2-´óÃæË³Ê±Õë 3-´óÃæÄæÊ±Õë
+   int function;//æ—‹è½¬æ–¹å¼  0-å°é¢é¡ºæ—¶é’ˆ 1-å°é¢é€†æ—¶é’ˆ  2-å¤§é¢é¡ºæ—¶é’ˆ 3-å¤§é¢é€†æ—¶é’ˆ
    Cube cube;
    int afterState;
    float afterXOffset;
@@ -25,7 +25,7 @@ public class RotateThread extends Thread
    public void run()
    {	  
 	  if(function==0)
-	  {//0-0Ë³Ê±ÕëĞı×ª
+	  {//0-0é¡ºæ—¶é’ˆæ—‹è½¬
 		   float angle=0;
 		   while(angle<90)
 		   {
@@ -45,7 +45,7 @@ public class RotateThread extends Thread
 		   }   
 	  }
 	  else if(function==1)
-	  {//0-0ÄæÊ±ÕëĞı×ª
+	  {//0-0é€†æ—¶é’ˆæ—‹è½¬
 		   float angle=0;
 		   while(angle<90)
 		   {
@@ -65,7 +65,7 @@ public class RotateThread extends Thread
 		   }
 	  }
 	  else if(function==2)
-	  {//0-1Ë³Ê±Õë
+	  {//0-1é¡ºæ—¶é’ˆ
 		  float angle=0;
 		   while(angle<90)
 		   {
@@ -85,7 +85,7 @@ public class RotateThread extends Thread
 		   }
 	  }
 	  else if(function==3)
-	  {//0-1ÄæÊ±Õë
+	  {//0-1é€†æ—¶é’ˆ
 		  float angle=0;
 		   while(angle<90)
 		   {
@@ -105,7 +105,7 @@ public class RotateThread extends Thread
 		   }
 	  }
 	  else if(function==4)
-	  {//1-2Ë³Ê±Õë
+	  {//1-2é¡ºæ—¶é’ˆ
 		  float angle=0;
 		   while(angle<90)
 		   {
@@ -125,7 +125,7 @@ public class RotateThread extends Thread
 		   }
 	  }
 	  else if(function==5)
-	  {//1-2ÄæÊ±Õë
+	  {//1-2é€†æ—¶é’ˆ
 		  float angle=0;
 		   while(angle<90)
 		   {
@@ -145,7 +145,7 @@ public class RotateThread extends Thread
 		   }
 	  }
 	  else if(function==6)
-	  {//1-0Ë³Ê±Õë
+	  {//1-0é¡ºæ—¶é’ˆ
 		  float angle=0;
 		   while(angle<90)
 		   {
@@ -165,7 +165,7 @@ public class RotateThread extends Thread
 		   }
 	  }
 	  else if(function==7)
-	  {//1-0ÄæÊ±Õë
+	  {//1-0é€†æ—¶é’ˆ
 		  float angle=0;
 		   while(angle<90)
 		   {
@@ -185,7 +185,7 @@ public class RotateThread extends Thread
 		   }
 	  }
 	  else if(function==8)
-	  {//2-1Ë³Ê±Õë
+	  {//2-1é¡ºæ—¶é’ˆ
 		  float angle=0;
 		   while(angle<90)
 		   {
@@ -205,7 +205,7 @@ public class RotateThread extends Thread
 		   }
 	  }
 	  else if(function==9)
-	  {//2-1 ÄæÊ±Õë
+	  {//2-1 é€†æ—¶é’ˆ
 		  float angle=0;
 		   while(angle<90)
 		   {
@@ -225,7 +225,7 @@ public class RotateThread extends Thread
 		   }
 	  }
 	  
-	  //½â³ıÈÅ¶¯
+	  //è§£é™¤æ‰°åŠ¨
 	  cube.tempCenterX=0;
 	  cube.tempCenterY=0;
 	  cube.tempCenterZ=0;
@@ -234,7 +234,7 @@ public class RotateThread extends Thread
 	  cube.angleZ=0;
 	  
 	  
-	  //¶¯»­Íê³ÉºóÉèÖÃ×´Ì¬
+	  //åŠ¨ç”»å®Œæˆåè®¾ç½®çŠ¶æ€
 	  cube.zOffset=this.afterZOffset;
 	  cube.xOffset=this.afterXOffset;
 	  cube.state=this.afterState;

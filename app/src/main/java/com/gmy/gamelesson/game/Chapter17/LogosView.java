@@ -11,29 +11,29 @@ import android.view.SurfaceView;
 import com.gmy.gamelesson.R;
 
 public class LogosView extends SurfaceView 
-implements SurfaceHolder.Callback  //ÊµÏÖÉúÃüÖÜÆÚ»Øµ÷½Ó¿Ú
+implements SurfaceHolder.Callback  //å®žçŽ°ç”Ÿå‘½å‘¨æœŸå›žè°ƒæŽ¥å£
 {
 	MainActivity activity;
-	Paint paint;//»­±Ê
-	int currentAlpha=0;//µ±Ç°µÄ²»Í¸Ã÷Öµ
+	Paint paint;//ç”»ç¬”
+	int currentAlpha=0;//å½“å‰çš„ä¸é€æ˜Žå€¼
 	
-	int screenWidth=320;//ÆÁÄ»¿í¶È
-	int screenHeight=480;//ÆÁÄ»¸ß¶È
-	int sleepSpan=50;//¶¯»­µÄÊ±ÑÓms
+	int screenWidth=320;//å±å¹•å®½åº¦
+	int screenHeight=480;//å±å¹•é«˜åº¦
+	int sleepSpan=50;//åŠ¨ç”»çš„æ—¶å»¶ms
 	
-	Bitmap[] logos=new Bitmap[2];//logoÍ¼Æ¬Êý×é
-	Bitmap currentLogo;//µ±Ç°logoÍ¼Æ¬ÒýÓÃ
+	Bitmap[] logos=new Bitmap[2];//logoå›¾ç‰‡æ•°ç»„
+	Bitmap currentLogo;//å½“å‰logoå›¾ç‰‡å¼•ç”¨
 	int currentX;
 	int currentY;
 	
 	public LogosView(MainActivity activity) {
 		super(activity);
 		this.activity = activity;
-		this.getHolder().addCallback(this);//ÉèÖÃÉúÃüÖÜÆÚ»Øµ÷½Ó¿ÚµÄÊµÏÖÕß
-		paint = new Paint();//´´½¨»­±Ê
-		paint.setAntiAlias(true);//´ò¿ª¿¹¾â³Ý
+		this.getHolder().addCallback(this);//è®¾ç½®ç”Ÿå‘½å‘¨æœŸå›žè°ƒæŽ¥å£çš„å®žçŽ°è€…
+		paint = new Paint();//åˆ›å»ºç”»ç¬”
+		paint.setAntiAlias(true);//æ‰“å¼€æŠ—é”¯é½¿
 		
-		//¼ÓÔØÍ¼Æ¬
+		//åŠ è½½å›¾ç‰‡
 		logos[0]=BitmapFactory.decodeResource(activity.getResources(), R.mipmap.baina);
 		logos[1]=BitmapFactory.decodeResource(activity.getResources(), R.mipmap.logo);
 		//logos[2]=BitmapFactory.decodeResource(activity.getResources(), R.drawable.lose);		
@@ -41,12 +41,12 @@ implements SurfaceHolder.Callback  //ÊµÏÖÉúÃüÖÜÆÚ»Øµ÷½Ó¿Ú
 
 	public void draw(Canvas canvas){
 		super.draw(canvas);
-		//»æÖÆºÚÌî³ä¾ØÐÎÇå±³¾°
-		paint.setColor(Color.BLACK);//ÉèÖÃ»­±ÊÑÕÉ«
+		//ç»˜åˆ¶é»‘å¡«å……çŸ©å½¢æ¸…èƒŒæ™¯
+		paint.setColor(Color.BLACK);//è®¾ç½®ç”»ç¬”é¢œè‰²
 		paint.setAlpha(255);
 		canvas.drawRect(0, 0, screenWidth, screenHeight, paint);
 		
-		//½øÐÐÆ½ÃæÌùÍ¼
+		//è¿›è¡Œå¹³é¢è´´å›¾
 		if(currentLogo==null)return;
 		paint.setAlpha(currentAlpha);		
 		canvas.drawBitmap(currentLogo, currentX, currentY, paint);	
@@ -56,7 +56,7 @@ implements SurfaceHolder.Callback  //ÊµÏÖÉúÃüÖÜÆÚ»Øµ÷½Ó¿Ú
 		
 	}
 
-	public void surfaceCreated(SurfaceHolder holder) {//´´½¨Ê±±»µ÷ÓÃ		
+	public void surfaceCreated(SurfaceHolder holder) {//åˆ›å»ºæ—¶è¢«è°ƒç”¨		
 		new Thread()
 		{
 			public void run()
@@ -64,22 +64,22 @@ implements SurfaceHolder.Callback  //ÊµÏÖÉúÃüÖÜÆÚ»Øµ÷½Ó¿Ú
 				for(Bitmap bm:logos)
 				{
 					currentLogo=bm;
-					//¼ÆËãÍ¼Æ¬Î»ÖÃ
+					//è®¡ç®—å›¾ç‰‡ä½ç½®
 					currentX=screenWidth/2-bm.getWidth()/2;
 					currentY=screenHeight/2-bm.getHeight()/2;
 					
 					for(int i=255;i>-10;i=i-10)
-					{//¶¯Ì¬¸ü¸ÄÍ¼Æ¬µÄÍ¸Ã÷¶ÈÖµ²¢²»¶ÏÖØ»æ	
+					{//åŠ¨æ€æ›´æ”¹å›¾ç‰‡çš„é€æ˜Žåº¦å€¼å¹¶ä¸æ–­é‡ç»˜	
 						currentAlpha=i;
 						if(currentAlpha<0)
 						{
 							currentAlpha=0;
 						}
 						SurfaceHolder myholder=LogosView.this.getHolder();
-						Canvas canvas = myholder.lockCanvas();//»ñÈ¡»­²¼
+						Canvas canvas = myholder.lockCanvas();//èŽ·å–ç”»å¸ƒ
 						try{
 							synchronized(myholder){
-								draw(canvas);//»æÖÆ
+								draw(canvas);//ç»˜åˆ¶
 							}
 						}
 						catch(Exception e){
@@ -94,7 +94,7 @@ implements SurfaceHolder.Callback  //ÊµÏÖÉúÃüÖÜÆÚ»Øµ÷½Ó¿Ú
 						try
 						{
 							if(i==255)
-							{//ÈôÊÇÐÂÍ¼Æ¬£¬¶àµÈ´ýÒ»»á
+							{//è‹¥æ˜¯æ–°å›¾ç‰‡ï¼Œå¤šç­‰å¾…ä¸€ä¼š
 								Thread.sleep(1000);
 							}
 							Thread.sleep(sleepSpan);
@@ -109,7 +109,7 @@ implements SurfaceHolder.Callback  //ÊµÏÖÉúÃüÖÜÆÚ»Øµ÷½Ó¿Ú
 		}.start();
 	}
 
-	public void surfaceDestroyed(SurfaceHolder arg0) {//Ïú»ÙÊ±±»µ÷ÓÃ
+	public void surfaceDestroyed(SurfaceHolder arg0) {//é”€æ¯æ—¶è¢«è°ƒç”¨
 
 	}
 }

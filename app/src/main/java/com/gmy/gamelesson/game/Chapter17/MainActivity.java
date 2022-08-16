@@ -22,20 +22,20 @@ public class MainActivity extends Activity {
 	Help help;
 	Setting setting;
 	SoundControl soundcontrol;
-	Handler hd;//ÏûÏ¢´¦ÀíÆ÷
-	MediaPlayer mpBack;//²¥·Å±³¾°ÒôÀÖ
+	Handler hd;//æ¶ˆæ¯å¤„ç†å™¨
+	MediaPlayer mpBack;//æ’­æ”¾èƒŒæ™¯éŸ³ä¹
 	MediaPlayer mpWin;
-	SoundPool soundPool;//ÒôÀÖ³Ø
-	HashMap<Integer,Integer> soundPoolMap;//ÉùÒô³ØÖĞÉùÒôIDÓë×Ô¶¨ÒåÉùÒôIDµÄMap
+	SoundPool soundPool;//éŸ³ä¹æ± 
+	HashMap<Integer,Integer> soundPoolMap;//å£°éŸ³æ± ä¸­å£°éŸ³IDä¸è‡ªå®šä¹‰å£°éŸ³IDçš„Map
 	boolean isWin=false;
 	YouWin winView;
 	LogosView logosView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
-        //ÉèÖÃÎªÊúÆÁ
+        //è®¾ç½®ä¸ºç«–å±
     	this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-    	//È«ÆÁ
+    	//å…¨å±
         requestWindowFeature(Window.FEATURE_NO_TITLE); 
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN ,  
 		              WindowManager.LayoutParams.FLAG_FULLSCREEN);	
@@ -62,20 +62,20 @@ public class MainActivity extends Activity {
 					break;
 				case START_GAME: 					
 					mGLSurfaceView=new MySurfaceView(MainActivity.this);
-			        mGLSurfaceView.requestFocus();//»ñÈ¡½¹µã
-			        mGLSurfaceView.setFocusableInTouchMode(true);//ÉèÖÃÎª¿É´¥¿Ø
+			        mGLSurfaceView.requestFocus();//è·å–ç„¦ç‚¹
+			        mGLSurfaceView.setFocusableInTouchMode(true);//è®¾ç½®ä¸ºå¯è§¦æ§
 			        setContentView(mGLSurfaceView);
 			        break;
 				case ENTER_SETTING:
 					setting=new Setting(MainActivity.this);
-					setting.requestFocus();//»ñÈ¡½¹µã
-				    setting.setFocusableInTouchMode(true);//ÉèÖÃÎª¿É´¥¿Ø	
+					setting.requestFocus();//è·å–ç„¦ç‚¹
+				    setting.setFocusableInTouchMode(true);//è®¾ç½®ä¸ºå¯è§¦æ§	
 				    setContentView(setting);
 				    break;							
 				case ENTER_HELP:
 					help=new Help(MainActivity.this);
-					help.requestFocus();//»ñÈ¡½¹µã
-					help.setFocusableInTouchMode(true);//ÉèÖÃÎª¿É´¥¿Ø
+					help.requestFocus();//è·å–ç„¦ç‚¹
+					help.setFocusableInTouchMode(true);//è®¾ç½®ä¸ºå¯è§¦æ§
 					setContentView(help);
 					break;
 				case ENTER_WINVIEW:
@@ -122,7 +122,7 @@ public class MainActivity extends Activity {
     }
     protected void initSound() {
 		// TODO Auto-generated method stub
-		//±³¾°ÒôÀÖ
+		//èƒŒæ™¯éŸ³ä¹
     	mpBack=MediaPlayer.create(this,R.raw.backsound);
     	mpBack.setLooping(true);
     	if(soundFlag)
@@ -131,17 +131,17 @@ public class MainActivity extends Activity {
     		soundFlag=false;
     		soundSetFlag=1;
     	}
-    	//»ñÊ¤ÒôÀÖ
+    	//è·èƒœéŸ³ä¹
     	mpWin=MediaPlayer.create(this, R.raw.winsound);
     	mpWin.setLooping(true);
-    	//ÒôÀÖ³Ø
+    	//éŸ³ä¹æ± 
     	soundPool=new SoundPool(4,AudioManager.STREAM_MUSIC,100);
     	soundPoolMap=new HashMap<Integer,Integer>();	
-    	//·­Ä¾¿éµÄÉùÒô
+    	//ç¿»æœ¨å—çš„å£°éŸ³
     	soundPoolMap.put(1, soundPool.load(this,R.raw.turncube,1));
-    	//¹ı¹ØµÄÉùÒô
+    	//è¿‡å…³çš„å£°éŸ³
     	soundPoolMap.put(2,soundPool.load(this,R.raw.pass,1));
-	    //µôÏÂÈ¥µÄÒôÀÖ
+	    //æ‰ä¸‹å»çš„éŸ³ä¹
 	    soundPoolMap.put(3,soundPool.load(this,R.raw.drop,1));
     	
 	}

@@ -3,25 +3,25 @@ import javax.microedition.khronos.opengles.GL10;
 import static com.gmy.gamelesson.game.Chapter17.Constant.*;
 public class Cube
 {
-	TextureRect trSmall;//Ğ¡ÃæÎÆÀíID
-	TextureRect trBig;//´óÃæÎÆÀíID
-	float scale;//³ß´çËõ·ÅÏµÊı
-	float rSmall;//Ğ¡ÃæĞı×ª°ë¾¶
-	float rBig;//´óÃæĞı×ª°ë¾¶
-	float unitLocalSize;//Êµ¼Êµ¥Î»³ß´ç¡ª¡ªĞ¡ÃæµÄ°ë±ß³¤
-	float angleZ=0;//ÊµÊ±Ğı×ªÈÅ¶¯½Ç¶È   ÈÆZÖá
-	float angleX=0;//ÊµÊ±Ğı×ªÈÅ¶¯½Ç¶È   ÈÆXÖá
-	float angleY=0;//ÊµÊ±Ğı×ªÈÅ¶¯½Ç¶È   ÈÆYÖá
-    int state=POSTURE_ONE;//µ±Ç°×ËÌ¬
-    float xOffset=0;//xÎ»ÖÃ
-    float zOffset=0;//ZÎ»ÖÃ
-    float tempCenterX=0;//Ğı×ªÁÙÊ±XÈÅ¶¯Öµ
-    float tempCenterY=0;//Ğı×ªÁÙÊ±YÈÅ¶¯Öµ
-    float tempCenterZ=0;//Ğı×ªÁÙÊ±ZÈÅ¶¯Öµ
+	TextureRect trSmall;//å°é¢çº¹ç†ID
+	TextureRect trBig;//å¤§é¢çº¹ç†ID
+	float scale;//å°ºå¯¸ç¼©æ”¾ç³»æ•°
+	float rSmall;//å°é¢æ—‹è½¬åŠå¾„
+	float rBig;//å¤§é¢æ—‹è½¬åŠå¾„
+	float unitLocalSize;//å®é™…å•ä½å°ºå¯¸â€”â€”å°é¢çš„åŠè¾¹é•¿
+	float angleZ=0;//å®æ—¶æ—‹è½¬æ‰°åŠ¨è§’åº¦   ç»•Zè½´
+	float angleX=0;//å®æ—¶æ—‹è½¬æ‰°åŠ¨è§’åº¦   ç»•Xè½´
+	float angleY=0;//å®æ—¶æ—‹è½¬æ‰°åŠ¨è§’åº¦   ç»•Yè½´
+    int state=POSTURE_ONE;//å½“å‰å§¿æ€
+    float xOffset=0;//xä½ç½®
+    float zOffset=0;//Zä½ç½®
+    float tempCenterX=0;//æ—‹è½¬ä¸´æ—¶Xæ‰°åŠ¨å€¼
+    float tempCenterY=0;//æ—‹è½¬ä¸´æ—¶Yæ‰°åŠ¨å€¼
+    float tempCenterZ=0;//æ—‹è½¬ä¸´æ—¶Zæ‰°åŠ¨å€¼
     int i1=INIT_I;
 	int j1=INIT_J;
 	int i2=INIT_I;
-	int j2=INIT_J;//³õÊ¼»¯×ø±ê£¬È·¶¨»ıÄ¾µÄÎ»ÖÃ	
+	int j2=INIT_J;//åˆå§‹åŒ–åæ ‡ï¼Œç¡®å®šç§¯æœ¨çš„ä½ç½®	
 	public Cube(float scale,int cubeSmallTexId,int cubeBigTexId,float[] texTS)
 	{
 		this.scale=scale;
@@ -35,9 +35,9 @@ public class Cube
 	public void drawSelf(GL10 gl)
 	{
 		gl.glPushMatrix();
-		//ÒÆ¶¯µ½Ö¸¶¨µÄXZÎ»ÖÃ»æÖÆCube
+		//ç§»åŠ¨åˆ°æŒ‡å®šçš„XZä½ç½®ç»˜åˆ¶Cube
 		gl.glTranslatef(xOffset, 0, zOffset);
-		//°´Ö¸¶¨µÄ×ËÌ¬»æÖÆCube
+		//æŒ‰æŒ‡å®šçš„å§¿æ€ç»˜åˆ¶Cube
 		switch(state)
 		{
 		  case POSTURE_ZERO: 
@@ -50,42 +50,42 @@ public class Cube
 			gl.glRotatef(90, 0, 1, 0);
 		  break;
 		}
-		//Ğı×ªÖĞµÄÈÅ¶¯
+		//æ—‹è½¬ä¸­çš„æ‰°åŠ¨
 		gl.glTranslatef(tempCenterX, tempCenterY, tempCenterZ);
 		gl.glRotatef(angleX, 1, 0, 0);
 		gl.glRotatef(angleY, 0, 1, 0);
 		gl.glRotatef(angleZ, 0, 0, 1);
-		//»æÖÆÇ°Ğ¡Ãæ
+		//ç»˜åˆ¶å‰å°é¢
 		gl.glPushMatrix();
 		gl.glTranslatef(0, 0, 2*UNIT_SIZE*scale);
 		trSmall.drawSelf(gl);		
 		gl.glPopMatrix();
-		//»æÖÆºóĞ¡Ãæ
+		//ç»˜åˆ¶åå°é¢
 		gl.glPushMatrix();		
 		gl.glTranslatef(0, 0, -2*UNIT_SIZE*scale);
 		gl.glRotatef(180, 0, 1, 0);
 		trSmall.drawSelf(gl);		
 		gl.glPopMatrix();
-		//»æÖÆÉÏ´óÃæ
+		//ç»˜åˆ¶ä¸Šå¤§é¢
 		gl.glPushMatrix();			
 		gl.glTranslatef(0,UNIT_SIZE*scale,0);
 		gl.glRotatef(-90, 1, 0, 0);
 		trBig.drawSelf(gl);
 		gl.glPopMatrix();
-		//»æÖÆÏÂ´óÃæ
+		//ç»˜åˆ¶ä¸‹å¤§é¢
 		gl.glPushMatrix();			
 		gl.glTranslatef(0,-UNIT_SIZE*scale,0);
 		gl.glRotatef(90, 1, 0, 0);
 		trBig.drawSelf(gl);
 		gl.glPopMatrix();
-		//»æÖÆ×ó´óÃæ
+		//ç»˜åˆ¶å·¦å¤§é¢
 		gl.glPushMatrix();			
 		gl.glTranslatef(UNIT_SIZE*scale,0,0);		
 		gl.glRotatef(-90, 1, 0, 0);
 		gl.glRotatef(90, 0, 1, 0);
 		trBig.drawSelf(gl);
 		gl.glPopMatrix();
-		//»æÖÆÓÒ´óÃæ
+		//ç»˜åˆ¶å³å¤§é¢
 		gl.glPushMatrix();			
 		gl.glTranslatef(-UNIT_SIZE*scale,0,0);		
 		gl.glRotatef(90, 1, 0, 0);
@@ -116,14 +116,14 @@ public class Cube
 			if(MAP[j1][i1]==2&&MAP[j2][i2]==2)
 			{
 				winSound=true;
-				new WinDrop(this).start();//µôÏÂÀ´µÄ¶¯»­¡£
+				new WinDrop(this).start();//æ‰ä¸‹æ¥çš„åŠ¨ç”»ã€‚
 				level++;
 				winAndLose=0;
 				winFlag=true;
 			}
 		}else
 		{
-			//·ÅµôÏÂÀ´µÄ¶¯»­¡£
+			//æ”¾æ‰ä¸‹æ¥çš„åŠ¨ç”»ã€‚
 			dropFlag=true;
 			int anmiNumber=ROTATE_ANMI_ID[state][keyNumber];
 			new DropOff
@@ -136,7 +136,7 @@ public class Cube
 		}
 		
 	}
-	public boolean checkOnOff(int afterState,int keyNumber)//Åö×²¼ì²â·½·¨
+	public boolean checkOnOff(int afterState,int keyNumber)//ç¢°æ’æ£€æµ‹æ–¹æ³•
 	{
 		switch(afterState)
 		{

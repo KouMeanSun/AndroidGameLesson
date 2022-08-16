@@ -18,9 +18,9 @@ import com.gmy.gamelesson.R;
 
 public class MySurfaceView extends GLSurfaceView {
 
-    private SceneRenderer mRenderer;//³¡¾°äÖÈ¾Æ÷
+    private SceneRenderer mRenderer;//åœºæ™¯æ¸²æŸ“å™¨
     //Cube cubeKong;
-    float tX;//Ä¿±êµãµÄ³õÊ¼×ø±ê¡£
+    float tX;//ç›®æ ‡ç‚¹çš„åˆå§‹åæ ‡ã€‚
     float tZ;
     float tY;
     float cX;
@@ -35,9 +35,9 @@ public class MySurfaceView extends GLSurfaceView {
         tX=-tempFlag+(INIT_I+1)*UNIT_SIZE-0.5f;
         tZ=-tempFlag+(INIT_J+1)*UNIT_SIZE-1.0f;
         cY=9.5f;
-        mRenderer = new SceneRenderer();	//´´½¨³¡¾°äÖÈ¾Æ÷
-        setRenderer(mRenderer);				//ÉèÖÃäÖÈ¾Æ÷		
-        setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);//ÉèÖÃäÖÈ¾Ä£Ê½ÎªÖ÷¶¯äÖÈ¾   
+        mRenderer = new SceneRenderer();	//åˆ›å»ºåœºæ™¯æ¸²æŸ“å™¨
+        setRenderer(mRenderer);				//è®¾ç½®æ¸²æŸ“å™¨		
+        setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);//è®¾ç½®æ¸²æŸ“æ¨¡å¼ä¸ºä¸»åŠ¨æ¸²æŸ“   
         
     }
 	@Override
@@ -166,9 +166,9 @@ public class MySurfaceView extends GLSurfaceView {
 	}
 	@Override
 	public boolean onKeyUp(int keyCode, KeyEvent e)
-	{//¼üÌ§ÆğÊÂ¼ş»Øµ÷·½·¨
+	{//é”®æŠ¬èµ·äº‹ä»¶å›è°ƒæ–¹æ³•
 		if(keyCode==4){
-			return false;//Ì§Æğreturn¼ü
+			return false;//æŠ¬èµ·returné”®
 		}		
 		if(anmiFlag==true)
 		{
@@ -196,7 +196,7 @@ public class MySurfaceView extends GLSurfaceView {
     			tX=-tempFlag+(targetX+1)*UNIT_SIZE-0.5f;    			
 	        break;
     	} 	
-		gkd.playSound(1, 0);//²¥·Å·­Ä¾¿éµÄÉùÒô
+		gkd.playSound(1, 0);//æ’­æ”¾ç¿»æœ¨å—çš„å£°éŸ³
 		closeSound();
 		dropSound();
 		times++;
@@ -211,27 +211,27 @@ public class MySurfaceView extends GLSurfaceView {
 
 	private class SceneRenderer implements GLSurfaceView.Renderer 
     {   
-		//¸÷ÖÖÎÆÀíId
-		int cubeSmallTexId;//³¤·½ÌåĞ¡ÃæÎÆÀíId
-		int cubeBigTexId;//³¤·½Ìå´óÃæÎÆÀíId
-		int floorId;//µØ°åÎÆÀíId
-		int iconId;//Í¼±êµÄÎÆÀíID
-		int headId;//Í·ÎÆÀíId
-		int numberId;//Êı×ÖId
-		int cloudId;//¸¡ÔÆµÄId
-		int backId;//±³¾°Í¼Id
-		int levelId;//¹ØÊıId
+		//å„ç§çº¹ç†Id
+		int cubeSmallTexId;//é•¿æ–¹ä½“å°é¢çº¹ç†Id
+		int cubeBigTexId;//é•¿æ–¹ä½“å¤§é¢çº¹ç†Id
+		int floorId;//åœ°æ¿çº¹ç†Id
+		int iconId;//å›¾æ ‡çš„çº¹ç†ID
+		int headId;//å¤´çº¹ç†Id
+		int numberId;//æ•°å­—Id
+		int cloudId;//æµ®äº‘çš„Id
+		int backId;//èƒŒæ™¯å›¾Id
+		int levelId;//å…³æ•°Id
 		
-		//¸÷ÖÖÍ¼Ïñ
+		//å„ç§å›¾åƒ
 		Cube cube;
-		FloorGroup floorGroup;//»æÖÆµØ°åµÄ¶ÔÏó
-    	TextureRect icon;//Í¼±ê¶ÔÏó
-		TextureRect head;//Í·Í¼Ïñ
+		FloorGroup floorGroup;//ç»˜åˆ¶åœ°æ¿çš„å¯¹è±¡
+    	TextureRect icon;//å›¾æ ‡å¯¹è±¡
+		TextureRect head;//å¤´å›¾åƒ
 		TextureRect backGround;
-		TextureRect level;//¹Ø¿¨µÄÍ¼Æ¬
-		BallCloud cloud;//ÔÆ
+		TextureRect level;//å…³å¡çš„å›¾ç‰‡
+		BallCloud cloud;//äº‘
 		//TextureRect cloud;
-    	Number number;//ÊıÄ¿Í¼Ïó
+    	Number number;//æ•°ç›®å›¾è±¡
     	
 		 
     	public SceneRenderer()
@@ -240,15 +240,15 @@ public class MySurfaceView extends GLSurfaceView {
     	}
     	
         public void onDrawFrame(GL10 gl) {
-        	//²ÉÓÃÆ½»¬×ÅÉ«
+        	//é‡‡ç”¨å¹³æ»‘ç€è‰²
             gl.glShadeModel(GL10.GL_SMOOTH);
-            //ÉèÖÃÎª´ò¿ª±³Ãæ¼ô²Ã
+            //è®¾ç½®ä¸ºæ‰“å¼€èƒŒé¢å‰ªè£
     		gl.glEnable(GL10.GL_CULL_FACE);            
-        	//Çå³ıÑÕÉ«»º´æÓÚÉî¶È»º´æ
+        	//æ¸…é™¤é¢œè‰²ç¼“å­˜äºæ·±åº¦ç¼“å­˜
         	gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
-        	//ÉèÖÃµ±Ç°¾ØÕóÎªÄ£Ê½¾ØÕó
+        	//è®¾ç½®å½“å‰çŸ©é˜µä¸ºæ¨¡å¼çŸ©é˜µ
             gl.glMatrixMode(GL10.GL_MODELVIEW);
-            //ÉèÖÃµ±Ç°¾ØÕóÎªµ¥Î»¾ØÕó
+            //è®¾ç½®å½“å‰çŸ©é˜µä¸ºå•ä½çŸ©é˜µ
             gl.glLoadIdentity(); 
             gl.glPushMatrix();
             gl.glTranslatef(0, 0, -25);
@@ -258,9 +258,9 @@ public class MySurfaceView extends GLSurfaceView {
 			(
 					gl,
 					-tempFlag+(targetX+1)*UNIT_SIZE+1.5f,
-					9f, //¹Û²ìµã×ø±ê
+					9f, //è§‚å¯Ÿç‚¹åæ ‡
 					10,
-					tX,//Ä¿±êµã×ø±ê
+					tX,//ç›®æ ‡ç‚¹åæ ‡
 					UNIT_HIGHT*6,
 					tZ,
 					0,
@@ -275,42 +275,42 @@ public class MySurfaceView extends GLSurfaceView {
             gl.glPopMatrix();  
             gl.glMatrixMode(GL10.GL_MODELVIEW);
             gl.glLoadIdentity();
-            //¿ªÆô»ìºÏ   
+            //å¼€å¯æ··åˆ   
             gl.glEnable(GL10.GL_BLEND); 
-            //ÉèÖÃÔ´»ìºÏÒò×ÓÓëÄ¿±ê»ìºÏÒò×Ó
+            //è®¾ç½®æºæ··åˆå› å­ä¸ç›®æ ‡æ··åˆå› å­
             gl.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);          
             gl.glTranslatef(0,8.475f*ratio, -15*ratio);
-            head.drawSelf(gl);//»æÖÆÍ·
+            head.drawSelf(gl);//ç»˜åˆ¶å¤´
             gl.glTranslatef(-4.5f*ratio, -0.15f*ratio, 0.015f*ratio);
-            icon.drawSelf(gl);//»æÖÆ¾§ÌåÍ¼±ê
+            icon.drawSelf(gl);//ç»˜åˆ¶æ™¶ä½“å›¾æ ‡
             gl.glTranslatef(1.5f*ratio, 0.0f, 0.015f*ratio);
-            number.drawSelf(gl);//»æÖÆ×ª¶¯´ÎÊı
+            number.drawSelf(gl);//ç»˜åˆ¶è½¬åŠ¨æ¬¡æ•°
             gl.glTranslatef(6.75f*ratio, 0, 0);
-            level.drawSelf(gl);//»æÖÆL
-            //½ûÖ¹»ìºÏ   
+            level.drawSelf(gl);//ç»˜åˆ¶L
+            //ç¦æ­¢æ··åˆ   
             gl.glDisable(GL10.GL_BLEND);
             gl.glPushMatrix();
             gl.glEnable(GL10.GL_BLEND);
             gl.glBlendFunc(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA); 
             gl.glTranslatef(-1.2f, -5.5f, -10.0f);
-            cloud.drawSelf(gl);//»æÖÆÔÆ²ã  
+            cloud.drawSelf(gl);//ç»˜åˆ¶äº‘å±‚  
             gl.glDisable(GL10.GL_BLEND);
             gl.glPopMatrix();
         }
 
         public void onSurfaceChanged(GL10 gl, int width, int height) {
-            //ÉèÖÃÊÓ´°´óĞ¡¼°Î»ÖÃ 
+            //è®¾ç½®è§†çª—å¤§å°åŠä½ç½® 
         	gl.glViewport(0, 0, width, height);
-        	//ÉèÖÃµ±Ç°¾ØÕóÎªÍ¶Ó°¾ØÕó
+        	//è®¾ç½®å½“å‰çŸ©é˜µä¸ºæŠ•å½±çŸ©é˜µ
             gl.glMatrixMode(GL10.GL_PROJECTION);
-            //ÉèÖÃµ±Ç°¾ØÕóÎªµ¥Î»¾ØÕó
+            //è®¾ç½®å½“å‰çŸ©é˜µä¸ºå•ä½çŸ©é˜µ
             gl.glLoadIdentity();
-            //¼ÆËãÍ¸ÊÓÍ¶Ó°µÄ±ÈÀı
+            //è®¡ç®—é€è§†æŠ•å½±çš„æ¯”ä¾‹
             ratio = (float) width / height;
             backWidth=width;
             backHeight=height;
             Log.d("backWidth"+backWidth, "backHeight"+backHeight);
-            //µ÷ÓÃ´Ë·½·¨¼ÆËã²úÉúÍ¸ÊÓÍ¶Ó°¾ØÕó
+            //è°ƒç”¨æ­¤æ–¹æ³•è®¡ç®—äº§ç”Ÿé€è§†æŠ•å½±çŸ©é˜µ
            gl.glFrustumf(-ratio, ratio, -1, 1, 1.67f, 100);
            number=new Number(numberId,MySurfaceView.this);
            icon=new TextureRect
@@ -354,7 +354,7 @@ public class MySurfaceView extends GLSurfaceView {
            		}
            );
            cloud=new BallCloud(15000*ratio,cloudId);
-         //×ª¶¯ÔÆ²ã
+         //è½¬åŠ¨äº‘å±‚
            new Thread()
            {
            	public void run()
@@ -384,17 +384,17 @@ public class MySurfaceView extends GLSurfaceView {
         }
 
         public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-            //¹Ø±Õ¿¹¶¶¶¯ 
+            //å…³é—­æŠ—æŠ–åŠ¨ 
         	gl.glDisable(GL10.GL_DITHER);
-        	//ÉèÖÃÌØ¶¨HintÏîÄ¿µÄÄ£Ê½£¬ÕâÀïÎªÉèÖÃÎªÊ¹ÓÃ¿ìËÙÄ£Ê½
+        	//è®¾ç½®ç‰¹å®šHinté¡¹ç›®çš„æ¨¡å¼ï¼Œè¿™é‡Œä¸ºè®¾ç½®ä¸ºä½¿ç”¨å¿«é€Ÿæ¨¡å¼
             gl.glHint(GL10.GL_PERSPECTIVE_CORRECTION_HINT,GL10.GL_FASTEST);
-            //ÉèÖÃÆÁÄ»±³¾°É«ºÚÉ«RGBA
+            //è®¾ç½®å±å¹•èƒŒæ™¯è‰²é»‘è‰²RGBA
             gl.glClearColor(0,0,0,0);
-        	//ÉèÖÃÎª´ò¿ª±³Ãæ¼ô²Ã
+        	//è®¾ç½®ä¸ºæ‰“å¼€èƒŒé¢å‰ªè£
             gl.glEnable(GL10.GL_CULL_FACE);
-            //ÆôÓÃÉî¶È²âÊÔ
+            //å¯ç”¨æ·±åº¦æµ‹è¯•
             gl.glEnable(GL10.GL_DEPTH_TEST);               
-            //³õÊ¼»¯ÎÆÀí
+            //åˆå§‹åŒ–çº¹ç†
             cubeSmallTexId=initTexture(gl,R.mipmap.cubesmall);
             cubeBigTexId=initTexture(gl, R.mipmap.cubebig);
             floorId=initTexture(gl,R.mipmap.floor);
@@ -418,10 +418,10 @@ public class MySurfaceView extends GLSurfaceView {
         }
     }
 	
-	//³õÊ¼»¯ÎÆÀí
+	//åˆå§‹åŒ–çº¹ç†
 	public int initTexture(GL10 gl,int drawableId)//textureId
 	{
-		//Éú³ÉÎÆÀíID
+		//ç”Ÿæˆçº¹ç†ID
 		int[] textures = new int[1];
 		gl.glGenTextures(1, textures, 0);    
 		int currTextureId=textures[0];    
@@ -473,7 +473,7 @@ public class MySurfaceView extends GLSurfaceView {
 	}
 	public void soundAndTimes()
 	{
-		gkd.playSound(1, 0);//²¥·Å·­Ä¾¿éµÄÉùÒô
+		gkd.playSound(1, 0);//æ’­æ”¾ç¿»æœ¨å—çš„å£°éŸ³
 	    closeSound();
 	    dropSound();
 	    times++;

@@ -83,7 +83,7 @@ implements SurfaceHolder.Callback {
 			myActivity.isSound=true;
 			myActivity.mpBack.start();//播放游戏背景音乐
 			myActivity.setMenuView();//切换至菜单项
-			
+
 			break;
 		}
 			

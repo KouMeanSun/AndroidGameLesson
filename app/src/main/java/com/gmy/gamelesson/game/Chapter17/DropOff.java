@@ -16,7 +16,7 @@ public class DropOff extends Thread
 	public void run()
 	{
 		if(function==0)
-		  {//0-0Ë³Ê±ÕëÐý×ª
+		  {//0-0é¡ºæ—¶é’ˆæ—‹è½¬
 			   float angle=0;
 			   while(angle<90)
 			   {
@@ -54,13 +54,13 @@ public class DropOff extends Thread
 						  {
 							  e.printStackTrace();
 						  }
-						//ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+						//è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 					  }
 			   }
 			   
 		  }
 		  else if(function==1)
-		  {//0-0ÄæÊ±ÕëÐý×ª
+		  {//0-0é€†æ—¶é’ˆæ—‹è½¬
 			   float angle=0;
 			   while(angle<90)
 			   {
@@ -100,13 +100,13 @@ public class DropOff extends Thread
 						  {
 							  e.printStackTrace();
 						  }
-						//ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+						//è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 					  } 
 			   }
 			  
 		  }
 		  else if(function==2)
-		  {//0-1Ë³Ê±Õë
+		  {//0-1é¡ºæ—¶é’ˆ
 			  float angle=0;
 			   while(angle<90)
 			   {
@@ -136,11 +136,11 @@ public class DropOff extends Thread
 					  {
 						  e.printStackTrace();
 					  }
-					//ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+					//è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 				  }
 		  }
 		  else if(function==3)
-		  {//0-1ÄæÊ±Õë
+		  {//0-1é€†æ—¶é’ˆ
 			  float angle=0;
 			   while(angle<90)
 			   {
@@ -170,11 +170,11 @@ public class DropOff extends Thread
 					  {
 						  e.printStackTrace();
 					  }
-					//ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+					//è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 				  }
 		  }
 		  else if(function==4)
-		  {//1-2Ë³Ê±Õë
+		  {//1-2é¡ºæ—¶é’ˆ
 			  float angle=0;
 			   while(angle<90)
 			   {
@@ -204,11 +204,11 @@ public class DropOff extends Thread
 					  {
 						  e.printStackTrace();
 					  }
-					//ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+					//è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 				  }
 		  }
 		  else if(function==5)
-		  {//1-2ÄæÊ±Õë
+		  {//1-2é€†æ—¶é’ˆ
 			  float angle=0;
 			   while(angle<90)
 			   {
@@ -238,11 +238,11 @@ public class DropOff extends Thread
 					  {
 						  e.printStackTrace();
 					  }
-					//ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+					//è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 				  }
 		  }
 		  else if(function==6)
-		  {//1-0Ë³Ê±Õë
+		  {//1-0é¡ºæ—¶é’ˆ
 			  float angle=0;
 			   while(angle<90)
 			   {
@@ -272,11 +272,11 @@ public class DropOff extends Thread
 					  {
 						  e.printStackTrace();
 					  }
-					//ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+					//è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 				  }
 		  }
 		  else if(function==7)
-		  {//1-0ÄæÊ±Õë
+		  {//1-0é€†æ—¶é’ˆ
 			  float angle=0;
 			   while(angle<90)
 			   {
@@ -306,11 +306,11 @@ public class DropOff extends Thread
 					  {
 						  e.printStackTrace();
 					  }
-					//ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+					//è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 				  }
 		  }
 		  else if(function==8)
-		  {//2-1Ë³Ê±Õë
+		  {//2-1é¡ºæ—¶é’ˆ
 			  float angle=0;
 			   while(angle<90)
 			   {
@@ -340,11 +340,11 @@ public class DropOff extends Thread
 					  {
 						  e.printStackTrace();
 					  }
-					//ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+					//è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 				  }
 		  }
 		  else if(function==9)
-		  {//2-1 ÄæÊ±Õë
+		  {//2-1 é€†æ—¶é’ˆ
 			  float angle=0;
 			   while(angle<90)
 			   {
@@ -374,11 +374,11 @@ public class DropOff extends Thread
 					  {
 						  e.printStackTrace();
 					  }
-					  //ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+					  //è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 				  }
 		  }
 	}
-	public void OneToTwoN()//1-2ÄæÊ±Õë
+	public void OneToTwoN()//1-2é€†æ—¶é’ˆ
 	{
 		while(true)
 		  {
@@ -393,10 +393,10 @@ public class DropOff extends Thread
 			  {
 				  e.printStackTrace();
 			  }
-			//ÉèÖÃ×ª»»»­Ãæ£¬½«Ñ­»·½áÊø
+			//è®¾ç½®è½¬æ¢ç”»é¢ï¼Œå°†å¾ªçŽ¯ç»“æŸ
 		  }
 	}
-	public void OneToTwoS()//1-2Ë³Ê±Õë
+	public void OneToTwoS()//1-2é¡ºæ—¶é’ˆ
 	{
 		while(true)
 		{

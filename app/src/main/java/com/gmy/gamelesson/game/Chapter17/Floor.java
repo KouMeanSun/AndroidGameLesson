@@ -25,7 +25,7 @@ public class Floor
 		this.scale=scale;
 		this.textureId=textureId;
 
-		vCount=GV_UNIT_NUM;//定点数量
+		vCount=GV_UNIT_NUM;//瀹氱偣鏁伴噺
 		
 		float[] vertices=
 		{
@@ -52,7 +52,7 @@ public class Floor
 			0,UNIT_HIGHT*scale,UNIT_SIZE,
 			UNIT_SIZE,0,UNIT_SIZE,
 			UNIT_SIZE,UNIT_HIGHT*scale,UNIT_SIZE,
-			//左面
+			//宸﹂潰
 			
 			0,UNIT_HIGHT*scale,0,
 			0,0,0,
@@ -61,7 +61,7 @@ public class Floor
 			0,UNIT_HIGHT*scale,0,
 			0,0,UNIT_SIZE,
 			0,UNIT_HIGHT*scale,UNIT_SIZE,
-			//右面
+			//鍙抽潰
 			UNIT_SIZE,UNIT_HIGHT*scale,UNIT_SIZE,
 			UNIT_SIZE,0,UNIT_SIZE,
 			UNIT_SIZE,0,0,
@@ -69,7 +69,7 @@ public class Floor
 			UNIT_SIZE,UNIT_HIGHT*scale,UNIT_SIZE,
 			UNIT_SIZE,0,0,
 			UNIT_SIZE,UNIT_HIGHT*scale,0,
-			//下面
+			//涓嬮潰
 			0,0,UNIT_SIZE,
 			0,0,0,
 			UNIT_SIZE,0,0,

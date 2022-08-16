@@ -16,7 +16,7 @@ public class Number
 	{
 		this.mv=mv;
 		
-		//Éú³É0-9Ê®¸öÊı×ÖµÄÎÆÀí¾ØĞÎ
+		//ç”Ÿæˆ0-9åä¸ªæ•°å­—çš„çº¹ç†çŸ©å½¢
 		for(int i=0;i<10;i++)
 		{
 			numbers[i]=new TextureRect
@@ -38,7 +38,7 @@ public class Number
 	{		
 		String scoreStr=mv.times+"";
 		for(int i=0;i<scoreStr.length();i++)
-		{//½«µÃ·ÖÖĞµÄÃ¿¸öÊı×Ö×Ö·û»æÖÆ
+		{//å°†å¾—åˆ†ä¸­çš„æ¯ä¸ªæ•°å­—å­—ç¬¦ç»˜åˆ¶
 			char c=scoreStr.charAt(i);
 			gl.glPushMatrix();
 			//gl.glTranslatef(i*2.25f*ratio, 0, 0);

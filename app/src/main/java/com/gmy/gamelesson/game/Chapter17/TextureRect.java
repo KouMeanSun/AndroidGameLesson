@@ -4,10 +4,10 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import javax.microedition.khronos.opengles.GL10;
 import static com.gmy.gamelesson.game.Chapter17.Constant.*;
-//ÎÆÀí¾ØĞÎ
+//çº¹ç†çŸ©å½¢
 public class TextureRect {
-	private FloatBuffer   mVertexBuffer;//¶¥µã×ø±êÊı¾İ»º³å
-    private FloatBuffer mTextureBuffer;//¶¥µãÎÆÀíÊı¾İ»º³å
+	private FloatBuffer   mVertexBuffer;//é¡¶ç‚¹åæ ‡æ•°æ®ç¼“å†²
+    private FloatBuffer mTextureBuffer;//é¡¶ç‚¹çº¹ç†æ•°æ®ç¼“å†²
     int vCount=0;
     int texId;
     float yAngle;
@@ -15,7 +15,7 @@ public class TextureRect {
     public TextureRect(float width,float height,int texId,float[] texST)
     {
     	this.texId=texId;
-    	//¶¥µã×ø±êÊı¾İµÄ³õÊ¼»¯================begin============================
+    	//é¡¶ç‚¹åæ ‡æ•°æ®çš„åˆå§‹åŒ–================begin============================
         vCount=6;
         float vertices[]=new float[]
         {
@@ -28,52 +28,52 @@ public class TextureRect {
         	width*UNIT_SIZE,height*UNIT_SIZE,0, 
         };
 		
-        //´´½¨¶¥µã×ø±êÊı¾İ»º³å
+        //åˆ›å»ºé¡¶ç‚¹åæ ‡æ•°æ®ç¼“å†²
         ByteBuffer vbb = ByteBuffer.allocateDirect(vertices.length*4);
-        vbb.order(ByteOrder.nativeOrder());//ÉèÖÃ×Ö½ÚË³Ğò
-        mVertexBuffer = vbb.asFloatBuffer();//×ª»»ÎªFloatĞÍ»º³å
-        mVertexBuffer.put(vertices);//Ïò»º³åÇøÖĞ·ÅÈë¶¥µã×ø±êÊı¾İ
-        mVertexBuffer.position(0);//ÉèÖÃ»º³åÇøÆğÊ¼Î»ÖÃ
-        //ÌØ±ğÌáÊ¾£ºÓÉÓÚ²»Í¬Æ½Ì¨×Ö½ÚË³Ğò²»Í¬Êı¾İµ¥Ôª²»ÊÇ×Ö½ÚµÄÒ»¶¨Òª¾­¹ıByteBuffer
-        //×ª»»£¬¹Ø¼üÊÇÒªÍ¨¹ıByteOrderÉèÖÃnativeOrder()£¬·ñÔòÓĞ¿ÉÄÜ»á³öÎÊÌâ
-        //¶¥µã×ø±êÊı¾İµÄ³õÊ¼»¯================end============================
+        vbb.order(ByteOrder.nativeOrder());//è®¾ç½®å­—èŠ‚é¡ºåº
+        mVertexBuffer = vbb.asFloatBuffer();//è½¬æ¢ä¸ºFloatå‹ç¼“å†²
+        mVertexBuffer.put(vertices);//å‘ç¼“å†²åŒºä¸­æ”¾å…¥é¡¶ç‚¹åæ ‡æ•°æ®
+        mVertexBuffer.position(0);//è®¾ç½®ç¼“å†²åŒºèµ·å§‹ä½ç½®
+        //ç‰¹åˆ«æç¤ºï¼šç”±äºä¸åŒå¹³å°å­—èŠ‚é¡ºåºä¸åŒæ•°æ®å•å…ƒä¸æ˜¯å­—èŠ‚çš„ä¸€å®šè¦ç»è¿‡ByteBuffer
+        //è½¬æ¢ï¼Œå…³é”®æ˜¯è¦é€šè¿‡ByteOrderè®¾ç½®nativeOrder()ï¼Œå¦åˆ™æœ‰å¯èƒ½ä¼šå‡ºé—®é¢˜
+        //é¡¶ç‚¹åæ ‡æ•°æ®çš„åˆå§‹åŒ–================end============================
         ByteBuffer tbb = ByteBuffer.allocateDirect(texST.length*4);
-        tbb.order(ByteOrder.nativeOrder());//ÉèÖÃ×Ö½ÚË³Ğò
-        mTextureBuffer = tbb.asFloatBuffer();//×ª»»ÎªintĞÍ»º³å
-        mTextureBuffer.put(texST);//Ïò»º³åÇøÖĞ·ÅÈë¶¥µã×ÅÉ«Êı¾İ
-        mTextureBuffer.position(0);//ÉèÖÃ»º³åÇøÆğÊ¼Î»ÖÃ         
+        tbb.order(ByteOrder.nativeOrder());//è®¾ç½®å­—èŠ‚é¡ºåº
+        mTextureBuffer = tbb.asFloatBuffer();//è½¬æ¢ä¸ºintå‹ç¼“å†²
+        mTextureBuffer.put(texST);//å‘ç¼“å†²åŒºä¸­æ”¾å…¥é¡¶ç‚¹ç€è‰²æ•°æ®
+        mTextureBuffer.position(0);//è®¾ç½®ç¼“å†²åŒºèµ·å§‹ä½ç½®         
         
     }
 
     public void drawSelf(GL10 gl)
     {        
-        gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);//ÆôÓÃ¶¥µã×ø±êÊı×é
+        gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);//å¯ç”¨é¡¶ç‚¹åæ ‡æ•°ç»„
         gl.glRotatef(yAngle, 0, 1, 0);
         gl.glTranslatef(xOffset, 0, 0);
-		//Îª»­±ÊÖ¸¶¨¶¥µã×ø±êÊı¾İ
+		//ä¸ºç”»ç¬”æŒ‡å®šé¡¶ç‚¹åæ ‡æ•°æ®
         gl.glVertexPointer
         (
-        		3,				//Ã¿¸ö¶¥µãµÄ×ø±êÊıÁ¿Îª3  xyz 
-        		GL10.GL_FLOAT,	//¶¥µã×ø±êÖµµÄÀàĞÍÎª GL_FIXED
-        		0, 				//Á¬Ğø¶¥µã×ø±êÊı¾İÖ®¼äµÄ¼ä¸ô
-        		mVertexBuffer	//¶¥µã×ø±êÊı¾İ
+        		3,				//æ¯ä¸ªé¡¶ç‚¹çš„åæ ‡æ•°é‡ä¸º3  xyz 
+        		GL10.GL_FLOAT,	//é¡¶ç‚¹åæ ‡å€¼çš„ç±»å‹ä¸º GL_FIXED
+        		0, 				//è¿ç»­é¡¶ç‚¹åæ ‡æ•°æ®ä¹‹é—´çš„é—´éš”
+        		mVertexBuffer	//é¡¶ç‚¹åæ ‡æ•°æ®
         );
         
-        //¿ªÆôÎÆÀí
+        //å¼€å¯çº¹ç†
         gl.glEnable(GL10.GL_TEXTURE_2D);   
-        //ÔÊĞíÊ¹ÓÃÎÆÀíST×ø±ê»º³å
+        //å…è®¸ä½¿ç”¨çº¹ç†STåæ ‡ç¼“å†²
         gl.glEnableClientState(GL10.GL_TEXTURE_COORD_ARRAY);
-        //Îª»­±ÊÖ¸¶¨ÎÆÀíST×ø±ê»º³å
+        //ä¸ºç”»ç¬”æŒ‡å®šçº¹ç†STåæ ‡ç¼“å†²
         gl.glTexCoordPointer(2, GL10.GL_FLOAT, 0, mTextureBuffer);
-        //°ó¶¨µ±Ç°ÎÆÀí
+        //ç»‘å®šå½“å‰çº¹ç†
         gl.glBindTexture(GL10.GL_TEXTURE_2D, texId);
 		
-        //»æÖÆÍ¼ĞÎ
+        //ç»˜åˆ¶å›¾å½¢
         gl.glDrawArrays
         (
-        		GL10.GL_TRIANGLES, 		//ÒÔÈı½ÇĞÎ·½Ê½Ìî³ä
-        		0, 			 			//¿ªÊ¼µã±àºÅ
-        		vCount					//¶¥µãµÄÊıÁ¿
+        		GL10.GL_TRIANGLES, 		//ä»¥ä¸‰è§’å½¢æ–¹å¼å¡«å……
+        		0, 			 			//å¼€å§‹ç‚¹ç¼–å·
+        		vCount					//é¡¶ç‚¹çš„æ•°é‡
         );
     }
 }

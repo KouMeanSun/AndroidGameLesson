@@ -4,48 +4,48 @@ package com.gmy.gamelesson.game.Chapter17;
 public class Constant 
 {
    
-    //±íÊ¾²»Í¬×ËÌ¬µÄ³£Á¿
-    public static final int POSTURE_ZERO=0;//×ËÌ¬0
-    public static final int POSTURE_ONE=1;//×ËÌ¬1
-    public static final int POSTURE_TWO=2;//×ËÌ¬2
-    //±íÊ¾°´¼ü·½ÏòµÄ³£Á¿
+    //è¡¨ç¤ºä¸åŒå§¿æ€çš„å¸¸é‡
+    public static final int POSTURE_ZERO=0;//å§¿æ€0
+    public static final int POSTURE_ONE=1;//å§¿æ€1
+    public static final int POSTURE_TWO=2;//å§¿æ€2
+    //è¡¨ç¤ºæŒ‰é”®æ–¹å‘çš„å¸¸é‡
     public static final int RIGHT_KEY=0;
     public static final int LEFT_KEY=1;
     public static final int UP_KEY=2;
     public static final int DOWN_KEY=3;    
-    //±íÊ¾×ËÌ¬×´Ì¬×ªÒÆ¹æÔòµÄ¾ØÕó
-    public static int[][] POSTURE_CHANGE=//ĞĞºÅ-ÊäÈë×ËÌ¬±àºÅ   ÁĞºÅ-°´¼ü·½Ïò±àºÅ
+    //è¡¨ç¤ºå§¿æ€çŠ¶æ€è½¬ç§»è§„åˆ™çš„çŸ©é˜µ
+    public static int[][] POSTURE_CHANGE=//è¡Œå·-è¾“å…¥å§¿æ€ç¼–å·   åˆ—å·-æŒ‰é”®æ–¹å‘ç¼–å·
     {
     		{0,0,1,1},
     		{2,2,0,0},
     		{1,1,2,2}
     };
-    //±íÊ¾XÎ»ÒÆ±ä»¯¹æÔòµÄ¾ØÕó
-    public static float[][] X_OFFSET_CHANGE=//ĞĞºÅ-ÊäÈë×ËÌ¬±àºÅ   ÁĞºÅ-°´¼ü·½Ïò±àºÅ
+    //è¡¨ç¤ºXä½ç§»å˜åŒ–è§„åˆ™çš„çŸ©é˜µ
+    public static float[][] X_OFFSET_CHANGE=//è¡Œå·-è¾“å…¥å§¿æ€ç¼–å·   åˆ—å·-æŒ‰é”®æ–¹å‘ç¼–å·
     {
     	{1,-1,0,0},
     	{1.5f,-1.5f,0,0},	
     	{1.5f,-1.5f,0,0}
     };
-    //±íÊ¾ZÎ»ÒÆ±ä»¯¹æÔòµÄ¾ØÕó
-    public static float[][] Z_OFFSET_CHANGE=//ĞĞºÅ-ÊäÈë×ËÌ¬±àºÅ   ÁĞºÅ-°´¼ü·½Ïò±àºÅ
+    //è¡¨ç¤ºZä½ç§»å˜åŒ–è§„åˆ™çš„çŸ©é˜µ
+    public static float[][] Z_OFFSET_CHANGE=//è¡Œå·-è¾“å…¥å§¿æ€ç¼–å·   åˆ—å·-æŒ‰é”®æ–¹å‘ç¼–å·
     {
     	{0,0,-1.5f,1.5f},
     	{0,0,-1.5f,1.5f},
     	{0,0,-1,1}
     }; 
-    //±íÊ¾²¥·Å¶¯»­±àºÅÇé¿öµÄ¾ØÕó
-    public static int[][] ROTATE_ANMI_ID=//ĞĞºÅ-ÊäÈë×ËÌ¬±àºÅ   ÁĞºÅ-°´¼ü·½Ïò±àºÅ
+    //è¡¨ç¤ºæ’­æ”¾åŠ¨ç”»ç¼–å·æƒ…å†µçš„çŸ©é˜µ
+    public static int[][] ROTATE_ANMI_ID=//è¡Œå·-è¾“å…¥å§¿æ€ç¼–å·   åˆ—å·-æŒ‰é”®æ–¹å‘ç¼–å·
     {
     	{0,1,2,3},
     	{4,5,6,7},
     	{8,9,0,1}
     };
-    //µØÍ¼¾ØÕó
-    //Ä¾¿é³õÊ¼·ÅÖÃÎ»ÖÃ
-    public static int INIT_I=2;//ËùÔÚµÄÁĞ  
-    public static int INIT_J=8;//ËùÔÚµÄĞĞ
-    public static final int[][] MAP=//0 ²»¿ÉÍ¨¹ı 1¿ÉÍ¨¹ı
+    //åœ°å›¾çŸ©é˜µ
+    //æœ¨å—åˆå§‹æ”¾ç½®ä½ç½®
+    public static int INIT_I=2;//æ‰€åœ¨çš„åˆ—  
+    public static int INIT_J=8;//æ‰€åœ¨çš„è¡Œ
+    public static final int[][] MAP=//0 ä¸å¯é€šè¿‡ 1å¯é€šè¿‡
     {
     	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -65,67 +65,67 @@ public class Constant
     };
 
     
-    public static int[][] afterStateIsZero=//·­×ªºó×´Ì¬(0)-¼ì²â·­×ªºóÎ»ÖÃ0»ò1
+    public static int[][] afterStateIsZero=//ç¿»è½¬åçŠ¶æ€(0)-æ£€æµ‹ç¿»è½¬åä½ç½®0æˆ–1
     {
     	{1,0,1,0},
     	{-1,0,-1,0},
     	{0,-2,0,-1},
     	{0,2,0,1}
     };
-    public static int[][] afterStateIsOne=//·­×ªºó×´Ì¬(1)-¼ì²â·­×ªºóÎ»ÖÃ0»ò1
+    public static int[][] afterStateIsOne=//ç¿»è½¬åçŠ¶æ€(1)-æ£€æµ‹ç¿»è½¬åä½ç½®0æˆ–1
     {
     	{1,0,2,0},
     	{-2,0,-1,0},
     	{0,-2,0,-1},
     	{0,1,0,2}
     };
-    public static int[][] afterStateIsTwo=//·­×ªºó×´Ì¬(2)-¼ì²â·­×ªºóÎ»ÖÃ0»ò1
+    public static int[][] afterStateIsTwo=//ç¿»è½¬åçŠ¶æ€(2)-æ£€æµ‹ç¿»è½¬åä½ç½®0æˆ–1
     {
     	{2,0,1,0},
     	{-2,0,-1,0},
     	{0,-1,0,-1},
     	{0,1,0,1}
     }; 
-    public static boolean anmiFlag=false;//¶¯»­ÊÇ·ñ²¥·ÅÖĞ
+    public static boolean anmiFlag=false;//åŠ¨ç”»æ˜¯å¦æ’­æ”¾ä¸­
 	public static final int ENTER_SOUND=0;
     public static final int ENTER_MENU=1;
-    public static final int START_GAME=2;//¼ÓÔØ²¢¿ªÊ¼ÓÎÏ·µÄMessage±àºÅ
+    public static final int START_GAME=2;//åŠ è½½å¹¶å¼€å§‹æ¸¸æˆçš„Messageç¼–å·
     public static final int ENTER_SETTING=3;
     public static final int	ENTER_HELP=4;
-    public static final int ENTER_WINVIEW=5;//½øÈë»ñÊ¤Ò³Ãæ
-	//½çÃæ³£Á¿
+    public static final int ENTER_WINVIEW=5;//è¿›å…¥è·èƒœé¡µé¢
+	//ç•Œé¢å¸¸é‡
 	 public static final float UNIT_SIZE=1.0f;
-    //Ò»¿éµØ°åµÄ¶¥µãÊıÁ¿
+    //ä¸€å—åœ°æ¿çš„é¡¶ç‚¹æ•°é‡
     public static final int GV_UNIT_NUM=36;
-    //µØ°åµÄ¸ß¶È
+    //åœ°æ¿çš„é«˜åº¦
     public static final float UNIT_HIGHT=0.1f;
-    public static boolean winSound=false;//ÊÇ·ñ²¥·Å»ñÊ¤ÒôÀÖ
-    public static boolean dropFlag=false;//ÊÇ·ñ²¥·ÅµôÏÂÀ´µÄÒôÀÖ
-    public static int targetX=INIT_I;//Ä¿±êX×ø±ê
-    public static int targetZ=INIT_J;//Ä¿±êZ×ø±ê
-    public static final float distance=6.0f;//¾àÀëÄ¿±êµãµÄ¾àÀë
-    public static final float AngleX=45;//ÓÚµØÃæµÄ¼Ğ½Ç
-    public static final float MOVE_SPAN=0.8f;//µ¥Î»ÒÆ¶¯µÄ¾àÀë
-	public static float tempFlag=MAP[0].length/2;//±ê¼ÇµØÍ¼µÄ³õÊ¼Î»ÖÃ
+    public static boolean winSound=false;//æ˜¯å¦æ’­æ”¾è·èƒœéŸ³ä¹
+    public static boolean dropFlag=false;//æ˜¯å¦æ’­æ”¾æ‰ä¸‹æ¥çš„éŸ³ä¹
+    public static int targetX=INIT_I;//ç›®æ ‡Xåæ ‡
+    public static int targetZ=INIT_J;//ç›®æ ‡Zåæ ‡
+    public static final float distance=6.0f;//è·ç¦»ç›®æ ‡ç‚¹çš„è·ç¦»
+    public static final float AngleX=45;//äºåœ°é¢çš„å¤¹è§’
+    public static final float MOVE_SPAN=0.8f;//å•ä½ç§»åŠ¨çš„è·ç¦»
+	public static float tempFlag=MAP[0].length/2;//æ ‡è®°åœ°å›¾çš„åˆå§‹ä½ç½®
 	public static boolean bOver=true;
-	public static int level=1;//¼ÇÂ¼µÚ¼¸¹Ø
-	public static boolean soundFlag=false;//ÊÇ·ñ¿ªÆôÉùÒô±êÖ¾
-	public static int soundSetFlag=0;//ÉèÖÃ½çÃæÉùÒô¿ØÖÆ±êÖ¾,1 ÒôÀÖ¿ªÆô  2  ÒôÀÖ¹Ø±Õ
-	public static int surfaceId=0;//0°ïÖú£¬1¹ØÓÚ
-	public static int goSurface=0;//0½øÈëÉùÒôÑ¡Ôñ½çÃæ¡£1½øÈëÖ÷²Ëµ¥½çÃæ.2¹ØÓÚ£¬°ïÖú½çÃæ
-	public static boolean threadFlag=true;//¿ØÖÆChoserThredÏß³Ì
-	public static float previousX;//downÊ±µÄx
-	public static float previousY;//downÊ±µÄy
-	public static float laterX;//upÊ±µÄx
-	public static float laterY;//upÊ±µÄx
-	public static float backWidth;//¼ÇÂ¼ÆÁÄ»¿í¶È
-	public static float backHeight;//¼ÇÂ¼ÆÁÄ»¸ß¶È
-	public static float ratio;//¼ÇÂ¼ÆÁÄ»¸ß¿í±È
+	public static int level=1;//è®°å½•ç¬¬å‡ å…³
+	public static boolean soundFlag=false;//æ˜¯å¦å¼€å¯å£°éŸ³æ ‡å¿—
+	public static int soundSetFlag=0;//è®¾ç½®ç•Œé¢å£°éŸ³æ§åˆ¶æ ‡å¿—,1 éŸ³ä¹å¼€å¯  2  éŸ³ä¹å…³é—­
+	public static int surfaceId=0;//0å¸®åŠ©ï¼Œ1å…³äº
+	public static int goSurface=0;//0è¿›å…¥å£°éŸ³é€‰æ‹©ç•Œé¢ã€‚1è¿›å…¥ä¸»èœå•ç•Œé¢.2å…³äºï¼Œå¸®åŠ©ç•Œé¢
+	public static boolean threadFlag=true;//æ§åˆ¶ChoserThredçº¿ç¨‹
+	public static float previousX;//downæ—¶çš„x
+	public static float previousY;//downæ—¶çš„y
+	public static float laterX;//upæ—¶çš„x
+	public static float laterY;//upæ—¶çš„x
+	public static float backWidth;//è®°å½•å±å¹•å®½åº¦
+	public static float backHeight;//è®°å½•å±å¹•é«˜åº¦
+	public static float ratio;//è®°å½•å±å¹•é«˜å®½æ¯”
 	public static int status=-1;//0:startgames,1:setting,2:about,3:help,4:exit
 	public static int keyStatus=status;
-	public static boolean winFlag=false;//ÊÇ·ñ»ñÊ¤
-	public static boolean loseFlag=false;//ÊÇ·ñÊ§°Ü
-	public static int winAndLose=-1;//ÓÃÀ´Ñ¡Ôñ»ñÊ¤Ê§°Ü
-	public static boolean settingFlag;//¿ØÖÆSettingThredÏß³Ì
+	public static boolean winFlag=false;//æ˜¯å¦è·èƒœ
+	public static boolean loseFlag=false;//æ˜¯å¦å¤±è´¥
+	public static int winAndLose=-1;//ç”¨æ¥é€‰æ‹©è·èƒœå¤±è´¥
+	public static boolean settingFlag;//æ§åˆ¶SettingThredçº¿ç¨‹
 }
 

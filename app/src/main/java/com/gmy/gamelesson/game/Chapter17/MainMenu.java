@@ -29,7 +29,7 @@ public class MainMenu extends SurfaceView implements SurfaceHolder.Callback {
 	MenuThread menuThread;
 	ThreeDThread threedthread;
 	public float Dx=0;
-	public float Dy=-200;//²âÊÔ¶¯Ì¬3d£¡£¡£¡
+	public float Dy=-200;//æµ‹è¯•åŠ¨æ€3dï¼ï¼ï¼
 	public static float choserX0=0;
 	public static float choserY0=240;
 	public static float choserX1=-20;
@@ -115,7 +115,7 @@ public class MainMenu extends SurfaceView implements SurfaceHolder.Callback {
 //			}
 
 			status=0;
-			activity.toAnotherView(START_GAME);//²âÊÔÓÃ¡£ÉÏÃæµÄ²¼¾ÖºÍ°´ÏÂµãÓĞÎÊÌâ¡£
+			activity.toAnotherView(START_GAME);//æµ‹è¯•ç”¨ã€‚ä¸Šé¢çš„å¸ƒå±€å’ŒæŒ‰ä¸‹ç‚¹æœ‰é—®é¢˜ã€‚
 									break;
 		case MotionEvent.ACTION_UP:
 								

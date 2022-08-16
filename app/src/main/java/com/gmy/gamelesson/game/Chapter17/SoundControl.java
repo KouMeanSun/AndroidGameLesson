@@ -16,7 +16,7 @@ public class SoundControl extends SurfaceView implements SurfaceHolder.Callback 
 	
 //	SurfaceViewExampleActivity activity;
 	MainActivity activity;
-	Bitmap isSound;//ÉùÒôÑ¡ÔñÍ¼Æ¬
+	Bitmap isSound;//å£°éŸ³é€‰æ‹©å›¾ç‰‡
 
 	//Paint paint;
 
@@ -74,11 +74,11 @@ public class SoundControl extends SurfaceView implements SurfaceHolder.Callback 
 	@Override
 	public void surfaceChanged(SurfaceHolder arg0, int arg1, int arg2, int arg3) {}
 
-	public void surfaceCreated(SurfaceHolder holder) {//´´½¨Ê±±»µ÷ÓÃ
-		Canvas canvas = holder.lockCanvas();//»ñÈ¡»­²¼
+	public void surfaceCreated(SurfaceHolder holder) {//åˆ›å»ºæ—¶è¢«è°ƒç”¨
+		Canvas canvas = holder.lockCanvas();//è·å–ç”»å¸ƒ
 		try{
 			synchronized(holder){
-				draw(canvas);//»æÖÆ
+				draw(canvas);//ç»˜åˆ¶
 			}			
 		}
 		catch(Exception e){
@@ -91,7 +91,7 @@ public class SoundControl extends SurfaceView implements SurfaceHolder.Callback 
 		}
 	}
 
-	public void surfaceDestroyed(SurfaceHolder arg0) {//Ïú»ÙÊ±±»µ÷ÓÃ
+	public void surfaceDestroyed(SurfaceHolder arg0) {//é”€æ¯æ—¶è¢«è°ƒç”¨
 
 	}
 
